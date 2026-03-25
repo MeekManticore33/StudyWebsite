@@ -1,0 +1,1918 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MIS 301 Study Guide — Chapters 1–10</title>
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:wght@400;600;700&family=DM+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root {
+  --burnt-orange: #BF5700;
+  --dark-orange: #9C4700;
+  --cream: #FDF6EC;
+  --charcoal: #1C1C1C;
+  --slate: #3A3A3A;
+  --light-gray: #F5F0E8;
+  --medium-gray: #E0D8CC;
+  --accent-teal: #2A7A6E;
+  --accent-blue: #2C5F8A;
+  --correct-green: #2D7A3A;
+  --wrong-red: #A33;
+  --card-shadow: 0 2px 12px rgba(0,0,0,0.08);
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  font-family: 'DM Sans', sans-serif;
+  background: var(--cream);
+  color: var(--charcoal);
+  line-height: 1.65;
+  font-size: 16px;
+}
+
+/* ── HEADER ── */
+header {
+  background: var(--burnt-orange);
+  color: white;
+  padding: 3rem 2rem 2.5rem;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+header::after {
+  content: '';
+  position: absolute;
+  bottom: -30px;
+  left: 0; right: 0;
+  height: 60px;
+  background: var(--cream);
+  border-radius: 50% 50% 0 0 / 100% 100% 0 0;
+}
+header h1 {
+  font-family: 'Source Serif 4', serif;
+  font-size: 2.6rem;
+  font-weight: 700;
+  letter-spacing: -0.5px;
+  margin-bottom: 0.3rem;
+}
+header p {
+  font-size: 1.05rem;
+  opacity: 0.9;
+  font-weight: 400;
+}
+header .subtitle {
+  font-size: 0.95rem;
+  opacity: 0.75;
+  margin-top: 0.3rem;
+}
+
+/* ── NAV ── */
+nav {
+  background: white;
+  border-bottom: 1px solid var(--medium-gray);
+  padding: 1rem 2rem;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  overflow-x: auto;
+  white-space: nowrap;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+}
+nav a {
+  display: inline-block;
+  padding: 0.4rem 0.9rem;
+  margin: 0.15rem 0.2rem;
+  border-radius: 6px;
+  text-decoration: none;
+  color: var(--slate);
+  font-size: 0.88rem;
+  font-weight: 600;
+  transition: all 0.2s;
+}
+nav a:hover, nav a:focus {
+  background: var(--burnt-orange);
+  color: white;
+}
+nav a.priority {
+  border: 2px solid var(--burnt-orange);
+  color: var(--burnt-orange);
+}
+nav a.priority:hover {
+  background: var(--burnt-orange);
+  color: white;
+}
+
+/* ── MAIN ── */
+main {
+  max-width: 900px;
+  margin: 2rem auto;
+  padding: 0 1.5rem 4rem;
+}
+
+/* ── CHAPTER SECTIONS ── */
+.chapter {
+  margin-bottom: 3.5rem;
+  scroll-margin-top: 80px;
+}
+.chapter-header {
+  background: white;
+  border-left: 5px solid var(--burnt-orange);
+  padding: 1.5rem 2rem;
+  border-radius: 0 10px 10px 0;
+  box-shadow: var(--card-shadow);
+  margin-bottom: 1.5rem;
+}
+.chapter-header .ch-num {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.8rem;
+  color: var(--burnt-orange);
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+}
+.chapter-header h2 {
+  font-family: 'Source Serif 4', serif;
+  font-size: 1.7rem;
+  font-weight: 700;
+  color: var(--charcoal);
+  margin-top: 0.2rem;
+}
+
+/* ── VOCAB SECTION ── */
+.vocab-section {
+  background: white;
+  border-radius: 10px;
+  padding: 2rem;
+  box-shadow: var(--card-shadow);
+  margin-bottom: 1.5rem;
+}
+.vocab-section h3 {
+  font-family: 'Source Serif 4', serif;
+  font-size: 1.2rem;
+  color: var(--burnt-orange);
+  margin-bottom: 1rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid var(--light-gray);
+}
+
+.vocab-item {
+  margin-bottom: 1.2rem;
+  padding-bottom: 1.2rem;
+  border-bottom: 1px solid var(--light-gray);
+}
+.vocab-item:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
+
+.vocab-term {
+  font-weight: 700;
+  color: var(--accent-blue);
+  font-size: 1.02rem;
+}
+.vocab-def {
+  margin-top: 0.25rem;
+  color: var(--slate);
+  font-size: 0.95rem;
+}
+.vocab-cite {
+  font-size: 0.82rem;
+  color: #888;
+  margin-top: 0.2rem;
+  font-style: italic;
+}
+.vocab-example {
+  background: var(--light-gray);
+  border-radius: 6px;
+  padding: 0.5rem 0.75rem;
+  margin-top: 0.4rem;
+  font-size: 0.9rem;
+  color: var(--slate);
+}
+
+/* ── QUIZ SECTION ── */
+.quiz-section {
+  background: white;
+  border-radius: 10px;
+  padding: 2rem;
+  box-shadow: var(--card-shadow);
+  border-top: 4px solid var(--accent-teal);
+}
+.quiz-section h3 {
+  font-family: 'Source Serif 4', serif;
+  font-size: 1.2rem;
+  color: var(--accent-teal);
+  margin-bottom: 1.2rem;
+}
+
+.quiz-q {
+  margin-bottom: 1.8rem;
+  padding-bottom: 1.8rem;
+  border-bottom: 1px solid var(--light-gray);
+}
+.quiz-q:last-child { border-bottom: none; }
+
+.q-number {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.78rem;
+  color: var(--accent-teal);
+  font-weight: 500;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+.q-scenario {
+  margin: 0.5rem 0 0.8rem;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: var(--charcoal);
+}
+.q-stem {
+  font-weight: 700;
+  margin-bottom: 0.6rem;
+  font-size: 0.95rem;
+}
+
+.q-options { list-style: none; padding: 0; }
+.q-options li {
+  padding: 0.55rem 0.8rem;
+  margin-bottom: 0.35rem;
+  border-radius: 6px;
+  border: 2px solid var(--medium-gray);
+  cursor: pointer;
+  font-size: 0.93rem;
+  transition: all 0.2s;
+  user-select: none;
+}
+.q-options li:hover { border-color: var(--accent-teal); background: #f0faf8; }
+.q-options li.selected { border-color: var(--accent-blue); background: #eef4fa; }
+.q-options li.correct { border-color: var(--correct-green); background: #e8f5e9; }
+.q-options li.incorrect { border-color: var(--wrong-red); background: #fce8e8; }
+
+.q-feedback {
+  display: none;
+  margin-top: 0.8rem;
+  padding: 0.8rem 1rem;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  line-height: 1.55;
+}
+.q-feedback.show { display: block; }
+.q-feedback.correct-fb { background: #e8f5e9; border-left: 4px solid var(--correct-green); }
+.q-feedback.incorrect-fb { background: #fce8e8; border-left: 4px solid var(--wrong-red); }
+
+.check-btn {
+  display: inline-block;
+  margin-top: 0.6rem;
+  padding: 0.45rem 1.2rem;
+  background: var(--accent-teal);
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 0.88rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.check-btn:hover { background: #1f6358; }
+.check-btn:disabled { opacity: 0.5; cursor: not-allowed; }
+
+/* ── RESPONSIVE ── */
+@media (max-width: 640px) {
+  header h1 { font-size: 1.8rem; }
+  .chapter-header { padding: 1rem 1.2rem; }
+  .vocab-section, .quiz-section { padding: 1.2rem; }
+  main { padding: 0 1rem 3rem; }
+}
+</style>
+</head>
+<body>
+
+<header>
+  <h1>MIS 301 Study Guide</h1>
+  <p>Introduction to Information Technology Management</p>
+  <p class="subtitle">The University of Texas at Austin — McCombs School of Business — Chapters 1–10</p>
+</header>
+
+<nav>
+  <a href="#ch1">Ch 1</a>
+  <a href="#ch2">Ch 2</a>
+  <a href="#ch3">Ch 3</a>
+  <a href="#ch4">Ch 4</a>
+  <a href="#ch5">Ch 5</a>
+  <a href="#ch6" class="priority">Ch 6</a>
+  <a href="#ch7" class="priority">Ch 7</a>
+  <a href="#ch8" class="priority">Ch 8</a>
+  <a href="#ch9" class="priority">Ch 9</a>
+  <a href="#ch10" class="priority">Ch 10</a>
+</nav>
+
+<main>
+
+<!-- ═══════════════════════════════════════════════ -->
+<!-- CHAPTER 1 -->
+<!-- ═══════════════════════════════════════════════ -->
+<section class="chapter" id="ch1">
+<div class="chapter-header">
+  <span class="ch-num">Chapter 1</span>
+  <h2>Setting the Stage</h2>
+</div>
+
+<div class="vocab-section">
+  <h3>Key Vocabulary &amp; Concepts</h3>
+
+  <div class="vocab-item">
+    <div class="vocab-term">Mental Model</div>
+    <div class="vocab-def">A person's internal representation of how the world works — a set of learned rules, beliefs, or ways of thinking shaped by background, education, culture, and experience. Information systems are defined by the mental models of the people who design them.</div>
+    <div class="vocab-cite">Source: Course slides, Ch 1; see also Senge, P., <em>The Fifth Discipline</em> (1990).</div>
+    <div class="vocab-example">Example: MS Excel treats 0 as FALSE and nonzero as TRUE — reflecting the mental model of engineers who designed early programming languages in the 20th century.</div>
+  </div>
+
+  <div class="vocab-item">
+    <div class="vocab-term">Curse of Knowledge</div>
+    <div class="vocab-def">A cognitive bias where once a person knows something, they find it difficult to imagine not knowing it, leading to poor communication. When experts cannot remember what it was like to be a beginner, they overestimate what others understand.</div>
+    <div class="vocab-cite">Source: Heath, C. &amp; Heath, D., <em>Made to Stick: Why Some Ideas Survive and Others Die</em> (2007).</div>
+    <div class="vocab-example">Example: A professor with 25+ years of Excel experience may explain homework worse than a TA because they can no longer imagine what it's like not to know Excel.</div>
+  </div>
+
+  <div class="vocab-item">
+    <div class="vocab-term">5-Component Information System (IS) Model</div>
+    <div class="vocab-def">An information system consists of five interrelated components: Hardware, Software, Data, Processes, and People. Hardware and Software form the computer side; Processes and People form the human side; Data serves as the bridge. Automation moves work from the human side to the computer side.</div>
+    <div class="vocab-cite">Source: Kroenke, D., <em>Experiencing MIS</em>, 2e, p. 30; Course slides, Ch 1.</div>
+    <div class="vocab-example">Example: An online ordering system includes servers (hardware), the website code (software), customer records (data), the order fulfillment workflow (process), and the employees and customers who use it (people).</div>
+  </div>
+
+  <div class="vocab-item">
+    <div class="vocab-term">Gartner Hype Cycle</div>
+    <div class="vocab-def">A model developed by Gartner that describes five phases new technologies typically pass through: (1) Emerging Innovation, (2) Peak of Inflated Expectations, (3) Trough of Disillusionment, (4) Slope of Enlightenment, and (5) Plateau of Productivity.</div>
+    <div class="vocab-cite">Source: Gartner, Inc., <a href="https://www.gartner.com/en/research/methodologies/gartner-hype-cycle" target="_blank">gartner.com/hype-cycle</a>; Course slides, Ch 1.</div>
+    <div class="vocab-example">Example: Generative AI may currently be near the Peak of Inflated Expectations, with massive investment but corporate adoption rates among large firms peaking at only ~14%.</div>
+  </div>
+
+  <div class="vocab-item">
+    <div class="vocab-term">Investment ≠ Adoption ≠ Diffusion</div>
+    <div class="vocab-def">High levels of investment in a technology do not guarantee that organizations or consumers will actually adopt or widely use it. When speculative (anticipatory) demand exceeds actual demand, a bubble forms. Market hype occurs when speculation outpaces real usage.</div>
+    <div class="vocab-cite">Source: Apollo Global Management (2025), U.S. Census Bureau BTOS; Course slides, Ch 1.</div>
+  </div>
+
+  <div class="vocab-item">
+    <div class="vocab-term">Crossing the Chasm (Geoffrey Moore)</div>
+    <div class="vocab-def">A framework expanding on the Hype Cycle, explaining that technology adoption responds to three types of demand: (1) actual demand (customers who will buy and use), (2) perceived market readiness (what firms believe the market wants), and (3) anticipatory/speculative adoption (early adopters betting on future value). The "chasm" is the gap between early adopters and the mainstream market.</div>
+    <div class="vocab-cite">Source: Moore, G., <em>Crossing the Chasm</em> (1991); Course slides, Ch 1.</div>
+  </div>
+
+  <div class="vocab-item">
+    <div class="vocab-term">Self-Directed Learning</div>
+    <div class="vocab-def">The ability to find trustworthy and accurate sources applicable to a current problem and distinguish between fact and opinion. Most problems have already been solved — the skill is in locating credible solutions.</div>
+    <div class="vocab-cite">Source: Course slides, Ch 1.</div>
+  </div>
+</div>
+
+<div class="quiz-section">
+  <h3>Chapter 1 Quiz</h3>
+
+  <div class="quiz-q" data-correct="B">
+    <div class="q-number">Question 1</div>
+    <div class="q-scenario">Marcus is building a scheduling app for his student organization. He designs the interface so that meeting times are always shown in 24-hour military format (e.g., 14:00 instead of 2:00 PM). When other members complain they find it confusing, Marcus is genuinely surprised — he grew up in a military family and has always read time this way.</div>
+    <div class="q-stem">Which concept best explains why Marcus designed the interface this way?</div>
+    <ul class="q-options">
+      <li data-letter="A">A. The Gartner Hype Cycle caused Marcus to adopt unproven technology too early</li>
+      <li data-letter="B">B. Marcus's mental model of how time should be displayed shaped the system's design</li>
+      <li data-letter="C">C. The Curse of Knowledge prevented Marcus from learning new time formats</li>
+      <li data-letter="D">D. A lack of self-directed learning caused Marcus to ignore user feedback</li>
+    </ul>
+    <button class="check-btn" onclick="checkAnswer(this)">Check Answer</button>
+    <div class="q-feedback">
+      <strong>Correct answer: B.</strong> A mental model is a learned internal representation shaped by background and experience. Marcus's military upbringing created a mental model where 24-hour time is the default, and that model directly shaped his system design. Option A misapplies the Hype Cycle, which describes technology maturity stages. Option C confuses the Curse of Knowledge (difficulty imagining others' lack of knowledge) with mental models (the belief itself). Option D is about learning habits, not system design decisions.
+    </div>
+  </div>
+
+  <div class="quiz-q" data-correct="C">
+    <div class="q-number">Question 2</div>
+    <div class="q-scenario">A senior developer at a software company is tasked with writing user documentation for a new inventory management tool. She writes instructions that skip several basic steps, assuming readers already know how to navigate databases. Junior employees report that the documentation is almost unusable for beginners.</div>
+    <div class="q-stem">Which phenomenon most directly explains why the documentation is difficult for beginners?</div>
+    <ul class="q-options">
+      <li data-letter="A">A. The developer's mental model of databases differs from the company standard</li>
+      <li data-letter="B">B. The 5-component IS model was not properly applied during system development</li>
+      <li data-letter="C">C. The Curse of Knowledge makes it hard for the developer to imagine not understanding databases</li>
+      <li data-letter="D">D. The software is in the Trough of Disillusionment phase of the Hype Cycle</li>
+    </ul>
+    <button class="check-btn" onclick="checkAnswer(this)">Check Answer</button>
+    <div class="q-feedback">
+      <strong>Correct answer: C.</strong> The Curse of Knowledge describes how experts struggle to imagine what it's like not to know something, causing them to communicate poorly with beginners. The developer skipped steps she considers obvious. Option A involves mental models but doesn't explain the communication gap. Option B refers to IS components, not communication quality. Option D misapplies the Hype Cycle to an internal documentation issue.
+    </div>
+  </div>
+
+  <div class="quiz-q" data-correct="A">
+    <div class="q-number">Question 3</div>
+    <div class="q-scenario">A venture capital firm invested $500 million in several AI startups in 2024. By mid-2025, survey data shows that large-firm AI adoption has actually declined from its peak of about 14%. The VC partners are surprised that their portfolio companies are struggling to find enterprise customers.</div>
+    <div class="q-stem">Which concept best explains the disconnect between the VC firm's investment and the market reality?</div>
+    <ul class="q-options">
+      <li data-letter="A">A. Anticipatory demand exceeded actual demand, reflecting the principle that investment does not equal adoption</li>
+      <li data-letter="B">B. The Curse of Knowledge prevented the VC partners from understanding AI technology</li>
+      <li data-letter="C">C. Network effects made it impossible for new AI startups to compete with incumbents</li>
+      <li data-letter="D">D. The 5-component IS model was incomplete because it lacked a people component</li>
+    </ul>
+    <button class="check-btn" onclick="checkAnswer(this)">Check Answer</button>
+    <div class="q-feedback">
+      <strong>Correct answer: A.</strong> The principle that investment ≠ adoption ≠ diffusion explains this gap — speculative demand drove investment far beyond what actual enterprise usage supported. Option B misapplies the Curse of Knowledge, which is about communication, not investment decisions. Option C addresses network effects, which aren't the primary issue here. Option D is factually incorrect — the IS model does include people.
+    </div>
+  </div>
+
+  <div class="quiz-q" data-correct="D">
+    <div class="q-number">Question 4</div>
+    <div class="q-scenario">A tech company launched a revolutionary wearable fitness tracker in 2022. Initial media coverage was extremely enthusiastic, calling it "the future of healthcare." By late 2023, several hospitals reported the device was inaccurate for clinical use, and investor interest dropped sharply. In 2025, the company quietly improved the sensor technology and began gaining traction with physical therapy clinics.</div>
+    <div class="q-stem">Which stage of the Gartner Hype Cycle does the company's 2025 resurgence best represent?</div>
+    <ul class="q-options">
+      <li data-letter="A">A. Peak of Inflated Expectations, because media coverage is generating renewed hype</li>
+      <li data-letter="B">B. Emerging Innovation, because the improved sensors represent a brand-new technology</li>
+      <li data-letter="C">C. Trough of Disillusionment, because investors have not yet returned</li>
+      <li data-letter="D">D. Slope of Enlightenment, because the product is finding practical value in specific use cases</li>
+    </ul>
+    <button class="check-btn" onclick="checkAnswer(this)">Check Answer</button>
+    <div class="q-feedback">
+      <strong>Correct answer: D.</strong> The Slope of Enlightenment occurs when a technology matures and begins demonstrating real, practical benefits in targeted applications. The company improved its product and found a specific market (physical therapy clinics). Option A describes the earlier hype phase, not a quiet resurgence. Option B is wrong because the technology isn't new — it was improved. Option C describes the 2023 downturn, not the 2025 recovery.
+    </div>
+  </div>
+
+  <div class="quiz-q" data-correct="B">
+    <div class="q-number">Question 5</div>
+    <div class="q-scenario">A small bakery owner decides to implement a new point-of-sale system. She purchases tablets (hardware) and downloads a POS app (software). The system stores transaction records (data) and her employees follow a defined checkout workflow (process). She also trains her staff to use the system (people).</div>
+    <div class="q-stem">According to the 5-component IS model, which component serves as the bridge between the computer side and the human side?</div>
+    <ul class="q-options">
+      <li data-letter="A">A. Software, because the POS app connects the hardware to the users</li>
+      <li data-letter="B">B. Data, because transaction records are shared between the technology and the people who use them</li>
+      <li data-letter="C">C. Process, because the checkout workflow links technology to business operations</li>
+      <li data-letter="D">D. Hardware, because the tablets physically sit between the software and the employees</li>
+    </ul>
+    <button class="check-btn" onclick="checkAnswer(this)">Check Answer</button>
+    <div class="q-feedback">
+      <strong>Correct answer: B.</strong> In the 5-component IS model, Data serves as the bridge between the computer side (Hardware, Software) and the human side (Processes, People). Option A is incorrect because Software is an "instruction" on the computer side, not a bridge. Option C is wrong because Processes belong to the human side. Option D is wrong because Hardware is an "actor" on the computer side.
+    </div>
+  </div>
+</div>
+</section>
+
+<!-- ═══════════════════════════════════════════════ -->
+<!-- CHAPTER 2 -->
+<!-- ═══════════════════════════════════════════════ -->
+<section class="chapter" id="ch2">
+<div class="chapter-header">
+  <span class="ch-num">Chapter 2</span>
+  <h2>Strategy &amp; Technology</h2>
+</div>
+
+<div class="vocab-section">
+  <h3>Key Vocabulary &amp; Concepts</h3>
+
+  <div class="vocab-item">
+    <div class="vocab-term">Competitive Advantage (CA)</div>
+    <div class="vocab-def">The ability of a firm to consistently outperform its industry peers. To be meaningful, it must be sustainable — the firm must establish a difference it can preserve over time.</div>
+    <div class="vocab-cite">Source: Porter, M., <em>Competitive Advantage</em> (1985); Course slides, Ch 2.</div>
+  </div>
+
+  <div class="vocab-item">
+    <div class="vocab-term">Porter's Five Forces Model</div>
+    <div class="vocab-def">An externally-focused framework describing five forces that determine the competitive intensity and profitability of an industry: (1) Rivalry among existing competitors, (2) Threat of New Entrants, (3) Threat of Substitute products/services, (4) Bargaining Power of Suppliers, and (5) Bargaining Power of Buyers.</div>
+    <div class="vocab-cite">Source: Porter, M., <em>Competitive Strategy</em> (1980); Course slides, Ch 2.</div>
+    <div class="vocab-example">Examples — Strong rivalry: used car dealers. Weak rivalry: the IRS (no competitors). Strong new entrant threat: food trucks (low barriers). Weak: professional football teams (massive capital required).</div>
+  </div>
+
+  <div class="vocab-item">
+    <div class="vocab-term">Barriers to Entry</div>
+    <div class="vocab-def">Obstacles that make it difficult for new firms to enter an industry and compete. High barriers to entry result in a low threat of new entrants. Types include: Capital Intensity (startup cost), Regulation (laws, intellectual property), Brand (established reputation), Distribution Channels (access to customers), Switching Costs, and Network Effects.</div>
+    <div class="vocab-cite">Source: Porter, M., <em>Competitive Strategy</em> (1980); Course slides, Ch 2.</div>
+  </div>
+
+  <div class="vocab-item">
+    <div class="vocab-term">Switching Costs (Lock-in)</div>
+    <div class="vocab-def">The costs a consumer incurs when changing from one product or service to another. These can be monetary (contract termination fees), time and effort (learning a new system), or relational (re-creating social connections or data). High switching costs act as a barrier to entry for competitors.</div>
+    <div class="vocab-cite">Source: Gallaugher, J., <em>Information Systems: A Manager's Guide to Harnessing Technology</em>; Course slides, Ch 2.</div>
+    <div class="vocab-example">Example: Moving from UT's email system to another provider would require importing/exporting years of messages and updating every account linked to that email.</div>
+  </div>
+
+  <div class="vocab-item">
+    <div class="vocab-term">Network Effects</div>
+    <div class="vocab-def">A phenomenon where the value of a product or service increases as more people use it. Network effects create powerful barriers to entry because new competitors must overcome the value created by an existing user base.</div>
+    <div class="vocab-cite">Source: Shapiro, C. &amp; Varian, H., <em>Information Rules</em> (1999); Course slides, Ch 2.</div>
+    <div class="vocab-example">Example: Social media platforms are valuable because your friends are on them. eBay attracts sellers because it has the most buyers.</div>
+  </div>
+
+  <div class="vocab-item">
+    <div class="vocab-term">Porter's Model of Competitive Strategy</div>
+    <div class="vocab-def">A 2×2 matrix classifying competitive strategies along two dimensions: competitive advantage source (Cost vs. Differentiation) and market scope (Broad vs. Narrow). This produces four strategies: (1) Broad Cost Leadership (e.g., Walmart), (2) Broad Differentiation (e.g., Amazon), (3) Narrow/Focused Cost (e.g., Dollar General, Aldi), and (4) Narrow/Focused Differentiation (e.g., Whole Foods, Rolex).</div>
+    <div class="vocab-cite">Source: Porter, M., <em>Competitive Strategy</em> (1980); Course slides, Ch 2.</div>
+  </div>
+
+  <div class="vocab-item">
+    <div class="vocab-term">Porter's Value Chain Model</div>
+    <div class="vocab-def">The set of activities through which a product or service is created and delivered to customers. Primary Activities (revenue drivers that directly touch the product): Inbound Logistics, Operations, Outbound Logistics, Marketing &amp; Sales, and Service. Support Activities (cost centers that don't directly touch the product): Infrastructure, HRM, Technology (R&amp;D), and Procurement.</div>
+    <div class="vocab-cite">Source: Porter, M., <em>Competitive Advantage</em> (1985); Course slides, Ch 2.</div>
+    <div class="vocab-example">Example: Apple Genius Bar employees are in the Service primary activity. Apple's R&amp;D engineers who develop the next iPhone are in the Technology support activity.</div>
+  </div>
+
+  <div class="vocab-item">
+    <div class="vocab-term">Business Process</div>
+    <div class="vocab-def">A defined sequence of steps or activities designed to produce a specific output or achieve a particular goal. Streamlining business processes is a key way IS enables competitive advantage.</div>
+    <div class="vocab-cite">Source: Course slides, Ch 2.</div>
+    <div class="vocab-example">Example: An e-commerce order process: Log on → Place order → Save order → Pay → Assemble → Ship → Update customer record.</div>
+  </div>
+
+  <div class="vocab-item">
+    <div class="vocab-term">Strategy → IS Linkage</div>
+    <div class="vocab-def">The five-step progression from strategy to information systems: (1) Examine Industry Structure, (2) Choose Competitive Strategy, (3) Link Value Chain Components, (4) Streamline Business Processes, (5) Design Information Systems.</div>
+    <div class="vocab-cite">Source: Course slides, Ch 2.</div>
+  </div>
+</div>
+
+<div class="quiz-section">
+  <h3>Chapter 2 Quiz</h3>
+
+  <div class="quiz-q" data-correct="C">
+    <div class="q-number">Question 1</div>
+    <div class="q-scenario">Two college roommates want to open a restaurant near campus. They notice there are already 15 similar restaurants within a half-mile radius, all competing fiercely on price. Suppliers have many restaurant clients and can easily raise ingredient prices. Students can easily walk to a different spot for lunch.</div>
+    <div class="q-stem">According to Porter's Five Forces, which combination of forces most threatens the profitability of the roommates' planned restaurant?</div>
+    <ul class="q-options">
+      <li data-letter="A">A. Low rivalry and high bargaining power of suppliers</li>
+      <li data-letter="B">B. High threat of new entrants and low bargaining power of buyers</li>
+      <li data-letter="C">C. High rivalry, high bargaining power of suppliers, and high bargaining power of buyers</li>
+      <li data-letter="D">D. High threat of substitutes and low bargaining power of suppliers</li>
+    </ul>
+    <button class="check-btn" onclick="checkAnswer(this)">Check Answer</button>
+    <div class="q-feedback">
+      <strong>Correct answer: C.</strong> The scenario describes 15 competing restaurants (high rivalry), suppliers who can raise prices (high supplier power), and students who can easily switch restaurants (high buyer power). Option A incorrectly states low rivalry. Option B incorrectly states low buyer power — students have many alternatives. Option D misidentifies the forces at play.
+    </div>
+  </div>
+
+  <div class="quiz-q" data-correct="A">
+    <div class="q-number">Question 2</div>
+    <div class="q-scenario">Aldi operates with a narrow product selection, minimal store decor, and a self-service bagging model. Customers bring their own bags and return their own carts. This approach keeps Aldi's operating costs far below those of full-service grocery chains, allowing it to undercut competitors on price in specific geographic markets.</div>
+    <div class="q-stem">Which competitive strategy from Porter's model does Aldi's approach best represent?</div>
+    <ul class="q-options">
+      <li data-letter="A">A. Focused (narrow) cost leadership, targeting a specific market segment with the lowest prices</li>
+      <li data-letter="B">B. Broad differentiation, offering a unique shopping experience to the widest possible market</li>
+      <li data-letter="C">C. Broad cost leadership, competing on price across all grocery segments nationwide</li>
+      <li data-letter="D">D. Focused differentiation, offering premium organic products to health-conscious shoppers</li>
+    </ul>
+    <button class="check-btn" onclick="checkAnswer(this)">Check Answer</button>
+    <div class="q-feedback">
+      <strong>Correct answer: A.</strong> Aldi targets a narrow market segment (budget-conscious consumers in specific areas) with a cost leadership approach (minimal services, low operating costs). Option B is wrong because Aldi doesn't differentiate — it competes on cost. Option C confuses narrow scope with broad scope. Option D misidentifies both the strategy (cost, not differentiation) and the product (budget staples, not premium organic).
+    </div>
+  </div>
+
+  <div class="quiz-q" data-correct="D">
+    <div class="q-number">Question 3</div>
+    <div class="q-scenario">At a large electronics retailer, the IT team is responsible for managing the company's server infrastructure, overseeing network security, and maintaining internal software systems. These employees never interact directly with customers or physically handle any products being sold.</div>
+    <div class="q-stem">Where do these IT employees fit on Porter's Value Chain?</div>
+    <ul class="q-options">
+      <li data-letter="A">A. Operations, because they operate the company's technology systems</li>
+      <li data-letter="B">B. Service, because they provide technical support for the company</li>
+      <li data-letter="C">C. Inbound Logistics, because they manage the flow of data into the company</li>
+      <li data-letter="D">D. Infrastructure (support activity), because they handle general management systems that don't directly touch the product</li>
+    </ul>
+    <button class="check-btn" onclick="checkAnswer(this)">Check Answer</button>
+    <div class="q-feedback">
+      <strong>Correct answer: D.</strong> IT infrastructure management falls under the Infrastructure support activity (which includes general management, planning, finance, and IS). Support activities are cost centers that don't directly touch the product. Option A confuses IT operations with the Operations primary activity (which transforms inputs into products). Option B confuses internal IT support with the Service primary activity (which provides after-sale support to customers). Option C misidentifies data management as a logistics function.
+    </div>
+  </div>
+
+  <div class="quiz-q" data-correct="B">
+    <div class="q-number">Question 4</div>
+    <div class="q-scenario">A small startup sells handmade candles online. The founder is considering ways to make it harder for customers to leave for competitors. She's thinking about launching a loyalty program where customers accumulate points toward free candles, and building a subscription box that automatically delivers seasonal scents every quarter.</div>
+    <div class="q-stem">Which barrier to entry is the founder primarily trying to create?</div>
+    <ul class="q-options">
+      <li data-letter="A">A. Capital intensity, by requiring customers to make a large upfront investment</li>
+      <li data-letter="B">B. Switching costs, by making it costly in terms of lost rewards and convenience to leave</li>
+      <li data-letter="C">C. Network effects, by increasing the value of candles as more customers join</li>
+      <li data-letter="D">D. Regulation, by creating legal barriers that prevent competitors from copying her model</li>
+    </ul>
+    <button class="check-btn" onclick="checkAnswer(this)">Check Answer</button>
+    <div class="q-feedback">
+      <strong>Correct answer: B.</strong> Loyalty points and auto-renewing subscriptions create switching costs — customers who leave would forfeit accumulated rewards and convenient delivery. Option A is incorrect because customers aren't making large upfront investments. Option C is wrong because buying candles doesn't become more valuable with more customers. Option D doesn't apply — there's no regulatory mechanism described.
+    </div>
+  </div>
+
+  <div class="quiz-q" data-correct="C">
+    <div class="q-number">Question 5</div>
+    <div class="q-scenario">Southwest Airlines historically flew only Boeing 737s, served secondary airports in midsize cities, avoided hub-and-spoke routing, offered no assigned seating, and achieved 15-minute gate turnarounds — far faster than industry averages.</div>
+    <div class="q-stem">According to Michael Porter, what makes Southwest's approach a genuine strategy rather than just operational efficiency?</div>
+    <ul class="q-options">
+      <li data-letter="A">A. Southwest invested more money in technology than its competitors</li>
+      <li data-letter="B">B. Southwest copied the best practices of other low-cost carriers</li>
+      <li data-letter="C">C. Southwest deliberately chose a different, integrated set of activities to deliver a unique mix of value</li>
+      <li data-letter="D">D. Southwest achieved economies of scale by being the largest U.S. airline</li>
+    </ul>
+    <button class="check-btn" onclick="checkAnswer(this)">Check Answer</button>
+    <div class="q-feedback">
+      <strong>Correct answer: C.</strong> Porter defines strategy as deliberately choosing a different set of activities to deliver a unique mix of value. Southwest's choices (single aircraft type, secondary airports, no frills, fast turnarounds) form an integrated, preservable system of differences. Option A confuses investment with strategy. Option B is the opposite of strategy — copying isn't differentiation. Option D confuses scale with strategic positioning.
+    </div>
+  </div>
+</div>
+</section>
+
+<!-- ═══════════════════════════════════════════════ -->
+<!-- CHAPTER 3 -->
+<!-- ═══════════════════════════════════════════════ -->
+<section class="chapter" id="ch3">
+<div class="chapter-header">
+  <span class="ch-num">Chapter 3</span>
+  <h2>Platforms &amp; Network Effects</h2>
+</div>
+
+<div class="vocab-section">
+  <h3>Key Vocabulary &amp; Concepts</h3>
+
+  <div class="vocab-item">
+    <div class="vocab-term">Metcalfe's Law</div>
+    <div class="vocab-def">The value of a network is proportional to the square of the number of its users (Value ≈ Users²). Named after Bob Metcalfe, inventor of Ethernet and UT Austin Professor of Innovation.</div>
+    <div class="vocab-cite">Source: Metcalfe, R. (1980); Course slides, Ch 3.</div>
+  </div>
+
+  <div class="vocab-item">
+    <div class="vocab-term">One-Sided Market</div>
+    <div class="vocab-def">A market that derives most of its value from a single class of users. Features same-side exchange benefits — value comes from interaction among members of the same group.</div>
+    <div class="vocab-cite">Source: Gallaugher, J.; Course slides, Ch 3.</div>
+    <div class="vocab-example">Example: A messaging app like WhatsApp — all users are the same type (message senders/receivers).</div>
+  </div>
+
+  <div class="vocab-item">
+    <div class="vocab-term">Two-Sided Market</div>
+    <div class="vocab-def">A network market comprised of two distinct categories of participants. Both sides must deliver value for the network to function. Features cross-side exchange benefits — an increase in users on one side attracts more participants on the other side.</div>
+    <div class="vocab-cite">Source: Eisenmann, T., Parker, G., &amp; Van Alstyne, M., "Strategies for Two-Sided Markets," <em>Harvard Business Review</em> (2006); Course slides, Ch 3.</div>
+    <div class="vocab-example">Example: The video game industry — more gamers attract more game developers, and more games attract more gamers.</div>
+  </div>
+
+  <div class="vocab-item">
+    <div class="vocab-term">Platform</div>
+    <div class="vocab-def">Products and services that allow for development and integration of software products and other complementary goods. "Products have features; platforms have communities."</div>
+    <div class="vocab-cite">Source: Course slides, Ch 3.</div>
+    <div class="vocab-example">Examples: iOS App Store, Google Play, Windows, Roblox, Shopify.</div>
+  </div>
+
+  <div class="vocab-item">
+    <div class="vocab-term">Marginal Cost (of Software)</div>
+    <div class="vocab-def">The cost of producing one additional unit of a product. For software, marginal cost is essentially zero — once the software is written, copying it costs virtually nothing. This leads to extremely profitable businesses for category-leading software products.</div>
+    <div class="vocab-cite">Source: Course slides, Ch 3.</div>
+  </div>
+
+  <div class="vocab-item">
+    <div class="vocab-term">Bundling</div>
+    <div class="vocab-def">A pricing strategy where multiple products are sold together at a combined price lower than the sum of individual prices. Bundling captures consumer surplus by converting users who wouldn't buy each product individually into buyers of the bundle.</div>
+    <div class="vocab-cite">Source: Course slides, Ch 3.</div>
+    <div class="vocab-example">Example: Microsoft Office bundled Word and Excel at $12 — both users bought the bundle, generating $24 in total revenue vs. only $20 if products were sold separately.</div>
+  </div>
+
+  <div class="vocab-item">
+    <div class="vocab-term">Konana's Software Ecosystem</div>
+    <div class="vocab-def">A layered model of the software stack: Hardware → Operating System → Database Management System → Middleware → Enterprise Applications → Consumer Applications. Each layer depends on those below it, creating lock-in and switching costs at each level.</div>
+    <div class="vocab-cite">Source: Konana, P. (2007); Course slides, Ch 3.</div>
+    <div class="vocab-example">Example: Web browsers are considered middleware because they sit between the OS and the applications that run on top of them.</div>
+  </div>
+
+  <div class="vocab-item">
+    <div class="vocab-term">Winner-Take-All Markets</div>
+    <div class="vocab-def">Industries with strong network effects tend toward a single dominant player or standard, and at the extreme, a monopoly. The incumbent's advantage includes switching costs, complementary products, the existing user base, plus technological functionality — while a new entrant can only offer technological functionality.</div>
+    <div class="vocab-cite">Source: Shapiro, C. &amp; Varian, H., <em>Information Rules</em> (1999); Course slides, Ch 3.</div>
+  </div>
+
+  <div class="vocab-item">
+    <div class="vocab-term">Strategies for Competing with Network Effects</div>
+    <div class="vocab-def">Key approaches: (1) Move early, (2) Subsidize adoption, (3) Leverage viral promotion, (4) Use social proof, (5) Expand via convergence or envelopment, (6) Form alliances, (7) Encourage complementary goods development, (8) Maintain backward compatibility.</div>
+    <div class="vocab-cite">Source: Gallaugher, J.; Course slides, Ch 3.</div>
+  </div>
+
+  <div class="vocab-item">
+    <div class="vocab-term">Social Proof</div>
+    <div class="vocab-def">The positive influence created when a person discovers that others are already doing something, making them more likely to do it too.</div>
+    <div class="vocab-cite">Source: Cialdini, R., <em>Influence</em> (1984); Course slides, Ch 3.</div>
+  </div>
+
+  <div class="vocab-item">
+    <div class="vocab-term">Convergence</div>
+    <div class="vocab-def">When two or more markets, once considered distinctly separate, begin to offer the same features and capabilities.</div>
+    <div class="vocab-cite">Source: Course slides, Ch 3.</div>
+    <div class="vocab-example">Example: The iPhone converged the phone, camera, music player, and web browser markets into one device.</div>
+  </div>
+
+  <div class="vocab-item">
+    <div class="vocab-term">Envelopment</div>
+    <div class="vocab-def">When one market attempts to conquer a new market by making it a subset, component, or feature of its primary offering.</div>
+    <div class="vocab-cite">Source: Eisenmann, T., Parker, G., &amp; Van Alstyne, M. (2011); Course slides, Ch 3.</div>
+  </div>
+
+  <div class="vocab-item">
+    <div class="vocab-term">Backward Compatibility</div>
+    <div class="vocab-def">The ability of a new technology to take advantage of complementary products developed for a prior generation of technology, reducing switching costs for adopters.</div>
+    <div class="vocab-cite">Source: Course slides, Ch 3.</div>
+    <div class="vocab-example">Example: Apple's Rosetta translation software allowed old PowerPC apps to run on new Intel-based Macs.</div>
+  </div>
+
+  <div class="vocab-item">
+    <div class="vocab-term">Freemium</div>
+    <div class="vocab-def">A business model offering a free version of a product — sometimes with limited features or a time restriction — to allow customers to try it, with the goal of converting them into paying subscribers.</div>
+    <div class="vocab-cite">Source: Course slides, Ch 3.</div>
+    <div class="vocab-example">Example: Zoom offered free video calls (limited to 40 minutes), then charged for unlimited meeting length.</div>
+  </div>
+</div>
+
+<div class="quiz-section">
+  <h3>Chapter 3 Quiz</h3>
+
+  <div class="quiz-q" data-correct="B">
+    <div class="q-number">Question 1</div>
+    <div class="q-scenario">A college student creates a study group app where students can post notes and quiz each other. The app initially has 10 users on campus. Over the semester, it grows to 200 users. The original 10 users report that the app is dramatically more useful now because there are notes for nearly every course and it's easy to find study partners.</div>
+    <div class="q-stem">Which concept best explains why the app became more valuable as it grew?</div>
+    <ul class="q-options">
+      <li data-letter="A">A. Switching costs, because users invested time uploading their notes</li>
+      <li data-letter="B">B. Network effects, because the app's value increased as the number of users grew</li>
+      <li data-letter="C">C. Bundling, because the app combines notes and quizzes into one product</li>
+      <li data-letter="D">D. Backward compatibility, because older notes still work in the newer version of the app</li>
+    </ul>
+    <button class="check-btn" onclick="checkAnswer(this)">Check Answer</button>
+    <div class="q-feedback">
+      <strong>Correct answer: B.</strong> Network effects occur when the value of a product increases as more people use it. With more users contributing notes and seeking study partners, the app becomes more useful for everyone. Option A describes lock-in, not value growth from user count. Option C misapplies bundling, which is a pricing strategy for combining products. Option D misidentifies backward compatibility, which relates to prior technology generations.
+    </div>
+  </div>
+
+  <div class="quiz-q" data-correct="D">
+    <div class="q-number">Question 2</div>
+    <div class="q-scenario">A new food delivery startup builds an app that lets restaurants list their menus and lets customers order meals for delivery. The startup notices that when they sign up more restaurants, more customers download the app, and when more customers use the app, more restaurants want to join.</div>
+    <div class="q-stem">What type of market dynamic is this startup experiencing?</div>
+    <ul class="q-options">
+      <li data-letter="A">A. A one-sided market with same-side exchange benefits among restaurants</li>
+      <li data-letter="B">B. A winner-take-all market driven by high capital intensity</li>
+      <li data-letter="C">C. A freemium model where the free tier attracts paying customers</li>
+      <li data-letter="D">D. A two-sided market with cross-side exchange benefits between restaurants and customers</li>
+    </ul>
+    <button class="check-btn" onclick="checkAnswer(this)">Check Answer</button>
+    <div class="q-feedback">
+      <strong>Correct answer: D.</strong> This is a two-sided market (two distinct participant types: restaurants and customers) exhibiting cross-side exchange benefits — growth on one side attracts participants on the other. Option A incorrectly labels it one-sided and misidentifies same-side benefits. Option B may eventually be true but doesn't describe the current dynamic. Option C describes a pricing model, not a market structure.
+    </div>
+  </div>
+
+  <div class="quiz-q" data-correct="A">
+    <div class="q-number">Question 3</div>
+    <div class="q-scenario">A tech startup has built a social media platform that is technically superior to Instagram in every way — better video quality, faster loading, better privacy controls, and no ads. Despite heavy marketing, the startup struggles to attract users because everyone's friends, followers, and content libraries are already on Instagram.</div>
+    <div class="q-stem">Which concept best explains why technological superiority alone is not enough for this startup to succeed?</div>
+    <ul class="q-options">
+      <li data-letter="A">A. In network markets, an incumbent's advantages from switching costs, complementary products, and user base outweigh a new entrant's technical functionality alone</li>
+      <li data-letter="B">B. The startup failed to implement a freemium model to attract initial users</li>
+      <li data-letter="C">C. The startup's competitive strategy was too broad in scope to compete effectively</li>
+      <li data-letter="D">D. The startup didn't maintain backward compatibility with Instagram's older features</li>
+    </ul>
+    <button class="check-btn" onclick="checkAnswer(this)">Check Answer</button>
+    <div class="q-feedback">
+      <strong>Correct answer: A.</strong> In network effect markets, incumbent products benefit from switching costs, complementary products (content, third-party integrations), and the existing user base — all of which a new entrant with only technological functionality cannot match. Option B may be a valid tactic but doesn't explain the core structural problem. Option C misapplies Porter's competitive strategy framework. Option D misuses backward compatibility, which refers to prior technology generations, not competitor compatibility.
+    </div>
+  </div>
+
+  <div class="quiz-q" data-correct="C">
+    <div class="q-number">Question 4</div>
+    <div class="q-scenario">In the early 2000s, the smartphone market was fragmented — dozens of phone manufacturers each ran different operating systems with different screen sizes and capabilities. App developers struggled to write software that worked on more than a few devices. Then Apple launched the iPhone with iOS and a unified App Store.</div>
+    <div class="q-stem">How did the iPhone's approach help solve the app development problem?</div>
+    <ul class="q-options">
+      <li data-letter="A">A. By using a freemium pricing model that attracted more developers</li>
+      <li data-letter="B">B. By forming alliances with all existing phone manufacturers</li>
+      <li data-letter="C">C. By creating a platform with a standardized ecosystem, making it worthwhile for developers to invest in building apps</li>
+      <li data-letter="D">D. By offering backward compatibility with apps written for older Nokia phones</li>
+    </ul>
+    <button class="check-btn" onclick="checkAnswer(this)">Check Answer</button>
+    <div class="q-feedback">
+      <strong>Correct answer: C.</strong> Apple created a platform (iOS + App Store) that standardized the hardware and software environment, so developers could write one app and reach millions of users. This is also an example of convergence — the iPhone merged the phone, camera, music player, and web browser markets. Option A describes a pricing model, not a platform strategy. Option B is factually incorrect. Option D is incorrect — the iPhone intentionally did not support older phone apps.
+    </div>
+  </div>
+
+  <div class="quiz-q" data-correct="B">
+    <div class="q-number">Question 5</div>
+    <div class="q-scenario">When Zoom launched, it offered a free tier that allowed anyone to host 40-minute video meetings with no account setup complexity. Users could invite others by simply sharing a link, and those invitees often signed up for their own accounts. During the 2020 pandemic, Zoom also gave free unlimited access to all K-12 schools.</div>
+    <div class="q-stem">Which combination of strategies for competing in network effect markets did Zoom employ?</div>
+    <ul class="q-options">
+      <li data-letter="A">A. Envelopment and backward compatibility</li>
+      <li data-letter="B">B. Freemium model, viral promotion, and subsidized adoption</li>
+      <li data-letter="C">C. Capital intensity and raising barriers to entry through regulation</li>
+      <li data-letter="D">D. Convergence and forming alliances with competitors like WebEx</li>
+    </ul>
+    <button class="check-btn" onclick="checkAnswer(this)">Check Answer</button>
+    <div class="q-feedback">
+      <strong>Correct answer: B.</strong> Zoom used a freemium model (free 40-minute tier), viral promotion (easy link sharing that recruited new users), and subsidized adoption (free service to K-12 schools). Option A doesn't apply — Zoom didn't envelope another market or rely on backward compatibility. Option C misapplies barriers to entry concepts. Option D is incorrect — Zoom competed against WebEx, not allied with it, and the scenario doesn't describe convergence.
+    </div>
+  </div>
+</div>
+</section>
+
+<!-- ═══════════════════════════════════════════════ -->
+<!-- CHAPTER 4 -->
+<!-- ═══════════════════════════════════════════════ -->
+<section class="chapter" id="ch4">
+<div class="chapter-header">
+  <span class="ch-num">Chapter 4</span>
+  <h2>Disruptive Technologies</h2>
+</div>
+
+<div class="vocab-section">
+  <h3>Key Vocabulary &amp; Concepts</h3>
+
+  <div class="vocab-item">
+    <div class="vocab-term">Disruptive Innovation</div>
+    <div class="vocab-def">An innovation that initially enters the market with attributes existing customers don't value, often targeting low-end or new consumer segments. Over time, the disruptive product improves until it invades and eventually overtakes established markets. Contrasts with sustaining innovation, which makes incremental improvements to existing products.</div>
+    <div class="vocab-cite">Source: Christensen, C., <em>The Innovator's Dilemma</em> (1997); Course slides, Ch 4.</div>
+    <div class="vocab-example">Example: The original iPhone (2007) was a disruptive innovation. Each subsequent iPhone upgrade (iPhone 15 → 16) is a sustaining innovation.</div>
+  </div>
+
+  <div class="vocab-item">
+    <div class="vocab-term">Sustaining Innovation</div>
+    <div class="vocab-def">Incremental improvements to existing products that serve current customers better. Does not create new markets or value networks.</div>
+    <div class="vocab-cite">Source: Christensen, C., <em>The Innovator's Dilemma</em> (1997); Course slides, Ch 4.</div>
+  </div>
+
+  <div class="vocab-item">
+    <div class="vocab-term">Enabling Technology</div>
+    <div class="vocab-def">A technology that makes products or services affordable and accessible to wider populations who previously could not use them.</div>
+    <div class="vocab-cite">Source: Course slides, Ch 4.</div>
+  </div>
+
+  <div class="vocab-item">
+    <div class="vocab-term">The Long Tail</div>
+    <div class="vocab-def">A business model concept where digital businesses can profit from selling a large number of niche products in small quantities, rather than relying solely on a few bestsellers. Physical retailers cannot stock such items because of shelf space constraints, but digital platforms have virtually unlimited inventory capacity.</div>
+    <div class="vocab-cite">Source: Anderson, C., <em>The Long Tail</em> (2006); Course slides, Ch 4.</div>
+    <div class="vocab-example">Example: Netflix and Amazon can offer obscure titles that a physical store like Blockbuster could never justify stocking.</div>
+  </div>
+
+  <div class="vocab-item">
+    <div class="vocab-term">Why Big Firms Fail at Disruption</div>
+    <div class="vocab-def">Established firms often fail to respond to disruptive innovation because: (1) they don't see disruptions as threats, (2) they lack resources allocated to unproven technologies, and (3) they ignore the needs of new, unproven customer segments. Solutions: talk to researchers and VCs, rotate staff, watch for employee departures to startups, and invest in startups.</div>
+    <div class="vocab-cite">Source: Christensen, C., <em>The Innovator's Dilemma</em> (1997); Course slides, Ch 4.</div>
+    <div class="vocab-example">Example: Blockbuster turned down buying Netflix for $50 million in 2000.</div>
+  </div>
+
+  <div class="vocab-item">
+    <div class="vocab-term">Cloud Computing (as disruptive technology)</div>
+    <div class="vocab-def">Cloud computing was the foundational disruptive technology that threatened traditional desktop software companies like Intuit. Intuit survived by acquiring Mint, migrating to cloud, and using AI — connected services now represent over 65% of revenue.</div>
+    <div class="vocab-cite">Source: Course slides, Ch 4.</div>
+  </div>
+</div>
+
+<div class="quiz-section">
+  <h3>Chapter 4 Quiz</h3>
+
+  <div class="quiz-q" data-correct="D">
+    <div class="q-number">Question 1</div>
+    <div class="q-scenario">In 2000, Blockbuster was the dominant video rental chain with thousands of stores nationwide. Netflix approached Blockbuster with an offer to be acquired for $50 million. Blockbuster's executives laughed off the offer, viewing Netflix's mail-order DVD service as a niche product that couldn't compete with their extensive store network and brand recognition.</div>
+    <div class="q-stem">Which characteristic of disruptive innovation best explains why Blockbuster failed to recognize Netflix as a threat?</div>
+    <ul class="q-options">
+      <li data-letter="A">A. Netflix offered a sustaining innovation that directly improved upon Blockbuster's existing services</li>
+      <li data-letter="B">B. Netflix had stronger network effects than Blockbuster's store locations</li>
+      <li data-letter="C">C. Netflix's high capital intensity made it impossible for Blockbuster to compete</li>
+      <li data-letter="D">D. Disruptive innovations initially target underserved segments with attributes incumbents don't value, making them easy to dismiss</li>
+    </ul>
+    <button class="check-btn" onclick="checkAnswer(this)">Check Answer</button>
+    <div class="q-feedback">
+      <strong>Correct answer: D.</strong> Disruptive innovations enter markets with attributes existing customers don't initially value — Netflix's mail-order model seemed inferior to in-store browsing. Blockbuster dismissed it because it didn't serve their core customers. Option A is wrong because Netflix was disruptive, not sustaining. Option B misapplies network effects. Option C is incorrect — Netflix actually had lower capital requirements than Blockbuster's physical stores.
+    </div>
+  </div>
+
+  <div class="quiz-q" data-correct="A">
+    <div class="q-number">Question 2</div>
+    <div class="q-scenario">A student runs a small Etsy shop selling vintage concert T-shirts. She stocks about 300 unique designs. Meanwhile, Amazon and eBay list millions of vintage T-shirts, including extremely obscure bands that would never justify shelf space in a physical retail store.</div>
+    <div class="q-stem">Which concept best explains why platforms like Amazon and eBay can profitably offer such an enormous selection of niche items?</div>
+    <ul class="q-options">
+      <li data-letter="A">A. The Long Tail — digital platforms profit from selling many niche products in small quantities because they don't face physical shelf space constraints</li>
+      <li data-letter="B">B. Sustaining innovation — Amazon continuously improves its existing product selection</li>
+      <li data-letter="C">C. Bundling — Amazon packages niche T-shirts with popular products to increase overall sales</li>
+      <li data-letter="D">D. Backward compatibility — Amazon supports older T-shirt designs from prior decades</li>
+    </ul>
+    <button class="check-btn" onclick="checkAnswer(this)">Check Answer</button>
+    <div class="q-feedback">
+      <strong>Correct answer: A.</strong> The Long Tail explains how digital platforms can profitably stock huge inventories of niche products because they aren't limited by physical shelf space. Option B misapplies sustaining innovation, which is about product improvements. Option C misuses bundling — there's no product packaging strategy described. Option D humorously misapplies backward compatibility.
+    </div>
+  </div>
+
+  <div class="quiz-q" data-correct="C">
+    <div class="q-number">Question 3</div>
+    <div class="q-scenario">Apple releases the iPhone 16 with a slightly better camera, a faster processor, and improved battery life compared to the iPhone 15. The core design, operating system, and target market remain essentially the same.</div>
+    <div class="q-stem">What type of innovation does the iPhone 16 represent?</div>
+    <ul class="q-options">
+      <li data-letter="A">A. Disruptive innovation, because it introduces new technology that could replace older phones</li>
+      <li data-letter="B">B. Enabling technology, because it makes smartphones affordable to new populations</li>
+      <li data-letter="C">C. Sustaining innovation, because it makes incremental improvements to serve existing customers better</li>
+      <li data-letter="D">D. Convergence, because it combines multiple technologies into a single device</li>
+    </ul>
+    <button class="check-btn" onclick="checkAnswer(this)">Check Answer</button>
+    <div class="q-feedback">
+      <strong>Correct answer: C.</strong> Sustaining innovation involves incremental improvements to existing products for current customers — better camera, faster processor, and longer battery in the same product category. Option A confuses any new technology with disruption — disruption requires targeting new or underserved markets. Option B is wrong because the iPhone 16 isn't making smartphones newly affordable. Option D was true of the original iPhone but not an incremental upgrade.
+    </div>
+  </div>
+
+  <div class="quiz-q" data-correct="B">
+    <div class="q-number">Question 4</div>
+    <div class="q-scenario">Intuit, the maker of TurboTax and QuickBooks, faced a major threat when cloud-based financial tools began emerging. Rather than ignore the trend, Intuit acquired the cloud-based personal finance app Mint, migrated its core products to cloud delivery, and integrated AI features. Today, connected cloud services account for over 65% of Intuit's revenue.</div>
+    <div class="q-stem">What was the foundational disruptive technology that threatened Intuit, and how did Intuit respond?</div>
+    <ul class="q-options">
+      <li data-letter="A">A. Artificial intelligence was the disruptive threat, and Intuit responded by building its own chip manufacturing</li>
+      <li data-letter="B">B. Cloud computing was the disruptive threat, and Intuit responded by acquiring competitors, migrating to cloud, and integrating AI</li>
+      <li data-letter="C">C. Mobile computing was the disruptive threat, and Intuit responded by launching a smartphone hardware line</li>
+      <li data-letter="D">D. Network effects were the disruptive threat, and Intuit responded by forming alliances with social media platforms</li>
+    </ul>
+    <button class="check-btn" onclick="checkAnswer(this)">Check Answer</button>
+    <div class="q-feedback">
+      <strong>Correct answer: B.</strong> Cloud computing was the foundational disruptive technology that threatened Intuit's desktop software business. Intuit adapted by acquiring Mint, migrating to the cloud, and using AI — a textbook example of an incumbent successfully responding to disruption. Option A identifies the wrong threat and wrong response. Option C misidentifies the threat and fabricates a hardware response. Option D confuses network effects (a market dynamic) with disruptive technology.
+    </div>
+  </div>
+
+  <div class="quiz-q" data-correct="A">
+    <div class="q-number">Question 5</div>
+    <div class="q-scenario">A large hotel chain notices that several of its best engineers have recently left to join a small startup that offers AI-powered dynamic pricing for vacation rentals. The chain's CEO dismisses the startup, saying "our customers prefer traditional hotels — that little company isn't our competition."</div>
+    <div class="q-stem">Based on the patterns described in the course, which response would be MOST effective for the hotel chain?</div>
+    <ul class="q-options">
+      <li data-letter="A">A. Track employee departures to startups as an early warning signal, talk to VCs, and consider investing in or partnering with the startup</li>
+      <li data-letter="B">B. Focus exclusively on sustaining innovations to current hotel services, since disruption is unlikely to affect established brands</li>
+      <li data-letter="C">C. Increase capital intensity by building more hotel locations to raise barriers to entry</li>
+      <li data-letter="D">D. Sue the departing employees to prevent them from working at the competitor</li>
+    </ul>
+    <button class="check-btn" onclick="checkAnswer(this)">Check Answer</button>
+    <div class="q-feedback">
+      <strong>Correct answer: A.</strong> The course identifies watching for employee departures to startups, talking to researchers and VCs, and investing in startups as key strategies for established firms to detect and respond to disruption. Option B represents the exact complacency that causes big firms to fail. Option C addresses a different barrier to entry and doesn't address the technological threat. Option D is a legal tactic, not a strategic technology response.
+    </div>
+  </div>
+</div>
+</section>
+
+<!-- ═══════════════════════════════════════════════ -->
+<!-- CHAPTER 5 -->
+<!-- ═══════════════════════════════════════════════ -->
+<section class="chapter" id="ch5">
+<div class="chapter-header">
+  <span class="ch-num">Chapter 5</span>
+  <h2>Zara &amp; Supply Chain Management</h2>
+</div>
+
+<div class="vocab-section">
+  <h3>Key Vocabulary &amp; Concepts</h3>
+
+  <div class="vocab-item">
+    <div class="vocab-term">Vertical Integration</div>
+    <div class="vocab-def">When a firm owns or controls multiple layers of its supply chain — from design through manufacturing to retail distribution. This gives the firm more control over quality, speed, and costs, but requires significant capital investment.</div>
+    <div class="vocab-cite">Source: Course slides, Ch 5; Porter, M., <em>Competitive Strategy</em> (1980).</div>
+    <div class="vocab-example">Example: Zara designs, manufactures, and distributes its own clothing through company-owned stores, while Gap outsources manufacturing to third-party factories.</div>
+  </div>
+
+  <div class="vocab-item">
+    <div class="vocab-term">Zara's Fast Fashion Model</div>
+    <div class="vocab-def">Zara can move a design from concept to store shelf in approximately 15 days (rivals take a full season). Key elements: in-house designers creating knock-offs of trending styles, just-in-time manufacturing, RFID tags for inventory tracking, and vertical integration. Zara spends less on technology than the industry average but uses it strategically. Higher manufacturing costs are offset by fewer markdowns, faster inventory turnover, less advertising, and reduced risk. Guiding principle: "Inventory = Death."</div>
+    <div class="vocab-cite">Source: Gallaugher, J.; Course slides, Ch 5.</div>
+  </div>
+
+  <div class="vocab-item">
+    <div class="vocab-term">Supply Chain Management (SCM)</div>
+    <div class="vocab-def">The coordination of relationships and activities across firms involved in creating and delivering a product or service to the end customer, with the goal of maximizing value and efficiency across the entire chain.</div>
+    <div class="vocab-cite">Source: Course slides, Ch 5.</div>
+  </div>
+
+  <div class="vocab-item">
+    <div class="vocab-term">Disintermediation</div>
+    <div class="vocab-def">The removal of intermediaries (middlemen) from a supply chain, allowing producers to sell directly to consumers. Reduces costs but also removes services that intermediaries provided.</div>
+    <div class="vocab-cite">Source: Course slides, Ch 5.</div>
+    <div class="vocab-example">Example: Dell sells computers directly to customers, bypassing retail stores. Zara's vertical integration means it sells directly through its own stores.</div>
+  </div>
+
+  <div class="vocab-item">
+    <div class="vocab-term">Bullwhip Effect</div>
+    <div class="vocab-def">A phenomenon where small fluctuations in consumer demand become amplified as orders move up the supply chain, resulting in increasingly large swings in inventory and ordering at each stage. It is NOT caused by erratic consumer demand — it is caused by the multistage nature of supply chains and is worsened by longer lead times. The fix is sharing actual consumer demand data across all supply chain participants.</div>
+    <div class="vocab-cite">Source: Lee, H., Padmanabhan, V., &amp; Whang, S., "The Bullwhip Effect in Supply Chains," <em>Sloan Management Review</em> (1997); Course slides, Ch 5.</div>
+  </div>
+
+  <div class="vocab-item">
+    <div class="vocab-term">Contract Manufacturing</div>
+    <div class="vocab-def">Outsourcing production to third-party manufacturers, typically in lower-cost countries. Offers lower costs but carries risks including sweatshop labor, brand damage, and reduced quality control. Service Level Agreements (SLAs) attempt to shift responsibility to third-party manufacturers.</div>
+    <div class="vocab-cite">Source: Course slides, Ch 5.</div>
+  </div>
+
+  <div class="vocab-item">
+    <div class="vocab-term">Fair Factories Clearinghouse</div>
+    <div class="vocab-def">An initiative created by Reebok that allows firms to share audit information on overseas manufacturers, improving transparency and accountability in global supply chains.</div>
+    <div class="vocab-cite">Source: Course slides, Ch 5.</div>
+  </div>
+
+  <div class="vocab-item">
+    <div class="vocab-term">RFID (Radio-Frequency Identification)</div>
+    <div class="vocab-def">A technology using electromagnetic fields to identify and track tags attached to objects. Used by Zara to track inventory in real time throughout its supply chain.</div>
+    <div class="vocab-cite">Source: Course slides, Ch 5.</div>
+  </div>
+</div>
+
+<div class="quiz-section">
+  <h3>Chapter 5 Quiz</h3>
+
+  <div class="quiz-q" data-correct="C">
+    <div class="q-number">Question 1</div>
+    <div class="q-scenario">A regional grocery chain notices that its warehouse orders for a popular cereal brand have been swinging wildly — sometimes ordering triple the usual amount, then barely ordering at all — even though checkout scanner data shows that actual consumer purchases of the cereal have been remarkably steady at about 500 boxes per week.</div>
+    <div class="q-stem">Which supply chain concept best explains this pattern?</div>
+    <ul class="q-options">
+      <li data-letter="A">A. Disintermediation, because the grocery chain has removed wholesalers from its supply chain</li>
+      <li data-letter="B">B. Vertical integration, because the chain controls too many layers of the supply chain</li>
+      <li data-letter="C">C. The Bullwhip Effect, because order variability is amplifying as it moves up the supply chain despite steady consumer demand</li>
+      <li data-letter="D">D. Contract manufacturing, because outsourced production creates unpredictable supply</li>
+    </ul>
+    <button class="check-btn" onclick="checkAnswer(this)">Check Answer</button>
+    <div class="q-feedback">
+      <strong>Correct answer: C.</strong> The Bullwhip Effect describes how small, steady consumer demand becomes amplified into large order swings at upstream supply chain stages. Critically, the effect is NOT caused by erratic consumer demand — it's caused by the multistage nature of supply chains. Option A describes cutting out middlemen, which isn't the issue. Option B is about ownership structure, not demand amplification. Option D addresses outsourcing, not demand variability.
+    </div>
+  </div>
+
+  <div class="quiz-q" data-correct="A">
+    <div class="q-number">Question 2</div>
+    <div class="q-scenario">Zara can take a trending design spotted on a fashion runway and have it in stores within approximately 15 days. Competing brands like Gap typically take an entire season (3–6 months) to bring new designs to market. Zara owns its own design studios, manufacturing facilities, and retail stores.</div>
+    <div class="q-stem">Which strategy most directly enables Zara's speed advantage?</div>
+    <ul class="q-options">
+      <li data-letter="A">A. Vertical integration — owning design, manufacturing, and distribution allows Zara to coordinate quickly without relying on external partners</li>
+      <li data-letter="B">B. Disintermediation — Zara eliminates all intermediaries by selling exclusively online</li>
+      <li data-letter="C">C. Contract manufacturing — outsourcing to low-cost countries gives Zara a cost and speed advantage</li>
+      <li data-letter="D">D. The Long Tail — Zara profits from selling niche fashion items in small quantities</li>
+    </ul>
+    <button class="check-btn" onclick="checkAnswer(this)">Check Answer</button>
+    <div class="q-feedback">
+      <strong>Correct answer: A.</strong> Vertical integration means Zara owns multiple layers of the supply chain, enabling tight coordination and rapid turnaround. Option B is wrong — Zara sells primarily through physical stores, and disintermediation alone doesn't explain the speed. Option C is the opposite of Zara's model — Zara manufactures in-house, not overseas. Option D misapplies a digital inventory concept to fast fashion.
+    </div>
+  </div>
+
+  <div class="quiz-q" data-correct="B">
+    <div class="q-number">Question 3</div>
+    <div class="q-scenario">A popular sneaker brand outsources all manufacturing to factories in Southeast Asia. Recently, a journalist published an exposé revealing that one of the factories employs underage workers in unsafe conditions. The brand's stock price drops 12% in a single day as consumers call for boycotts on social media.</div>
+    <div class="q-stem">Which supply chain risk does this scenario best illustrate?</div>
+    <ul class="q-options">
+      <li data-letter="A">A. The Bullwhip Effect, because demand for the sneakers will become unpredictable</li>
+      <li data-letter="B">B. Contract manufacturing risk, where outsourced production creates brand damage from sweatshop labor practices</li>
+      <li data-letter="C">C. Disintermediation, because removing middlemen exposed the brand to manufacturing problems</li>
+      <li data-letter="D">D. Vertical integration failure, because the brand owned the factory where violations occurred</li>
+    </ul>
+    <button class="check-btn" onclick="checkAnswer(this)">Check Answer</button>
+    <div class="q-feedback">
+      <strong>Correct answer: B.</strong> Contract manufacturing offers lower costs but risks sweatshop labor and brand damage when third-party factories violate labor standards. Option A describes demand amplification, not labor issues. Option C misapplies disintermediation — the brand hasn't cut out middlemen. Option D is incorrect because the brand outsourced manufacturing — it doesn't own the factory.
+    </div>
+  </div>
+
+  <div class="quiz-q" data-correct="D">
+    <div class="q-number">Question 4</div>
+    <div class="q-scenario">Zara's parent company Inditex reported revenue of approximately $31.7 billion with $4.08 billion in profit, while Gap reported $16.3 billion in revenue with a $1.83 billion loss. Zara manufactures many items in-house at higher cost, while Gap outsources manufacturing to lower-cost countries.</div>
+    <div class="q-stem">Which factor best explains how Zara achieves higher profitability despite higher manufacturing costs?</div>
+    <ul class="q-options">
+      <li data-letter="A">A. Zara spends significantly more on advertising than Gap, building stronger brand loyalty</li>
+      <li data-letter="B">B. Zara uses contract manufacturing in more efficient factories than Gap</li>
+      <li data-letter="C">C. Zara benefits from stronger network effects among fashion consumers</li>
+      <li data-letter="D">D. Zara's speed-to-market means fewer markdowns, faster inventory turnover, and reduced risk of unsold goods</li>
+    </ul>
+    <button class="check-btn" onclick="checkAnswer(this)">Check Answer</button>
+    <div class="q-feedback">
+      <strong>Correct answer: D.</strong> Zara's guiding principle is "Inventory = Death." Fast turnaround (15 days) means clothing matches current trends, resulting in fewer clearance sales, faster turnover, and less unsold inventory. Option A is incorrect — Zara actually spends less on advertising than competitors. Option B is wrong — Zara manufactures in-house, not via contract manufacturing. Option C misapplies network effects to a retail context.
+    </div>
+  </div>
+
+  <div class="quiz-q" data-correct="C">
+    <div class="q-number">Question 5</div>
+    <div class="q-scenario">A supply chain consultant recommends that a mid-size retailer share its point-of-sale data with all upstream suppliers, including the raw materials providers. The retailer is skeptical, wondering why a cotton supplier would need access to data about how many T-shirts consumers buy each week.</div>
+    <div class="q-stem">Which supply chain problem is the consultant primarily trying to solve by recommending data sharing?</div>
+    <ul class="q-options">
+      <li data-letter="A">A. Disintermediation, by cutting out wholesalers from the supply chain</li>
+      <li data-letter="B">B. Contract manufacturing risk, by giving suppliers visibility into quality standards</li>
+      <li data-letter="C">C. The Bullwhip Effect, by giving all supply chain participants access to actual consumer demand data</li>
+      <li data-letter="D">D. Vertical integration, by encouraging the retailer to acquire its upstream suppliers</li>
+    </ul>
+    <button class="check-btn" onclick="checkAnswer(this)">Check Answer</button>
+    <div class="q-feedback">
+      <strong>Correct answer: C.</strong> The primary fix for the Bullwhip Effect is sharing actual consumer demand data across all supply chain participants so each stage can base orders on real demand rather than amplified signals from the stage below. Option A describes removing intermediaries, not sharing data. Option B addresses quality, not demand variability. Option D suggests ownership changes, not information sharing.
+    </div>
+  </div>
+</div>
+</section>
+
+<!-- ═══════════════════════════════════════════════ -->
+<!-- CHAPTER 6 -->
+<!-- ═══════════════════════════════════════════════ -->
+<section class="chapter" id="ch6">
+<div class="chapter-header">
+  <span class="ch-num">Chapter 6</span>
+  <h2>Moore's Law &amp; Hardware</h2>
+</div>
+
+<div class="vocab-section">
+  <h3>Key Vocabulary &amp; Concepts</h3>
+
+  <div class="vocab-item">
+    <div class="vocab-term">Moore's Law</div>
+    <div class="vocab-def">The observation that the number of transistors on a microchip doubles approximately every 18 months, with corresponding decreases in cost per transistor. It is not a law of physics but an industry observation by Intel co-founder Gordon Moore that became a self-fulfilling industry business plan. AI capabilities are currently doubling approximately every 6 months.</div>
+    <div class="vocab-cite">Source: Moore, G., "Cramming More Components onto Integrated Circuits," <em>Electronics</em> (1965); Course slides, Ch 6.</div>
+  </div>
+
+  <div class="vocab-item">
+    <div class="vocab-term">Price Elasticity of Technology Demand</div>
+    <div class="vocab-def">The demand for technology is highly elastic — as computing becomes cheaper (per Moore's Law), demand increases significantly and entirely new applications become feasible.</div>
+    <div class="vocab-cite">Source: Course slides, Ch 6.</div>
+    <div class="vocab-example">Example: Cheap processing power made smartphones, streaming video, and cloud services possible — uses that didn't exist when computing was expensive.</div>
+  </div>
+
+  <div class="vocab-item">
+    <div class="vocab-term">Semiconductor / Transistor / Chip</div>
+    <div class="vocab-def">A semiconductor is a material that conducts electricity conditionally. A transistor is a tiny binary switch (representing 1s and 0s) built from semiconductor material. A chip (integrated circuit) contains billions of transistors on a single piece of silicon.</div>
+    <div class="vocab-cite">Source: Course slides, Ch 6.</div>
+  </div>
+
+  <div class="vocab-item">
+    <div class="vocab-term">Bits, Bytes, Bandwidth, and Latency</div>
+    <div class="vocab-def">8 bits = 1 byte. Storage is measured in Bytes (capital B); transfer speeds in bits per second (lowercase b). Divide Mbps by 8 to get MB/s. Bandwidth = the volume of data that can travel simultaneously (like highway lanes). Latency = the time for data to travel from source to destination (like the speed limit). Streaming needs high bandwidth; gaming needs low latency.</div>
+    <div class="vocab-cite">Source: Course slides, Ch 6.</div>
+  </div>
+
+  <div class="vocab-item">
+    <div class="vocab-term">GPU (Graphics Processing Unit) / ASIC</div>
+    <div class="vocab-def">Originally designed for rendering graphics, GPUs are now ideal for AI workloads because they can perform many calculations simultaneously (parallel processing). GPUs are a type of ASIC (Application-Specific Integrated Circuit) — a chip designed for a particular use rather than general-purpose computing. NVIDIA dominates the high-end AI chip market (80–95% market share).</div>
+    <div class="vocab-cite">Source: Course slides, Ch 6.</div>
+  </div>
+
+  <div class="vocab-item">
+    <div class="vocab-term">Multicore Processors</div>
+    <div class="vocab-def">CPUs with multiple independent processing cores on a single chip. They run cooler and use less power than equivalent single-core processors, enabling improved performance through parallel task execution.</div>
+    <div class="vocab-cite">Source: Course slides, Ch 6.</div>
+  </div>
+
+  <div class="vocab-item">
+    <div class="vocab-term">Fab (Fabrication Facility)</div>
+    <div class="vocab-def">A semiconductor manufacturing plant that costs $20 billion or more to build and requires massive amounts of power and water. Most high-end chips are made by TSMC (Taiwan Semiconductor Manufacturing Company).</div>
+    <div class="vocab-cite">Source: Course slides, Ch 6.</div>
+  </div>
+
+  <div class="vocab-item">
+    <div class="vocab-term">CHIPS and Science Act (2022)</div>
+    <div class="vocab-def">U.S. legislation providing $52 billion in subsidies for domestic semiconductor production, $24 billion in tax credits, and over $170 billion for research, aimed at reducing dependence on foreign chip manufacturing (particularly TSMC in Taiwan).</div>
+    <div class="vocab-cite">Source: CHIPS and Science Act, Pub. L. 117-167 (2022); Course slides, Ch 6.</div>
+  </div>
+
+  <div class="vocab-item">
+    <div class="vocab-term">Compiler</div>
+    <div class="vocab-def">A program that converts human-readable developer code into machine-executable instructions that a processor can run. Different processors may require different compilers.</div>
+    <div class="vocab-cite">Source: Course slides, Ch 6.</div>
+  </div>
+
+  <div class="vocab-item">
+    <div class="vocab-term">Apple M-Series Chips &amp; Rosetta 2</div>
+    <div class="vocab-def">Apple's custom ARM-based processors (M1, M2, etc.) are designed by Apple and manufactured by TSMC. They use optimized instruction pathways for better performance and efficiency. Rosetta 2 is an emulator that maintains backward compatibility by allowing software written for older Intel-based Macs to run on the new M-series chips.</div>
+    <div class="vocab-cite">Source: Course slides, Ch 6.</div>
+  </div>
+
+  <div class="vocab-item">
+    <div class="vocab-term">E-Waste</div>
+    <div class="vocab-def">Discarded electronic devices. Globally, 62 million tons were generated in 2022, projected to reach 74 million tons by 2030. Contains toxic substances (lead, cadmium, mercury). There is no comprehensive U.S. federal recycling law. Apple's Daisy robot can recycle 200 iPhones per hour.</div>
+    <div class="vocab-cite">Source: Global E-waste Monitor (2024); Course slides, Ch 6.</div>
+  </div>
+
+  <div class="vocab-item">
+    <div class="vocab-term">Disney MagicBand / RFID Wearable</div>
+    <div class="vocab-def">Disney's RFID-enabled wristband used for park admission, hotel room keys, payments, and location tracking. Enables big data analytics that reduced turnstile wait times by 30% and allowed Disney to serve 3,000–5,000 additional guests daily.</div>
+    <div class="vocab-cite">Source: Course slides, Ch 6.</div>
+  </div>
+</div>
+
+<div class="quiz-section">
+  <h3>Chapter 6 Quiz</h3>
+
+  <div class="quiz-q" data-correct="B">
+    <div class="q-number">Question 1</div>
+    <div class="q-scenario">In 2005, streaming HD video to a phone was impractical — processors were too slow, data plans too expensive, and networks too limited. By 2024, billions of people stream 4K video on their smartphones daily. The computing power needed for this became inexpensive enough to fit in a pocket-sized device.</div>
+    <div class="q-stem">Which two concepts together best explain why streaming video went from impractical to ubiquitous?</div>
+    <ul class="q-options">
+      <li data-letter="A">A. The Bullwhip Effect and vertical integration in smartphone manufacturing</li>
+      <li data-letter="B">B. Moore's Law driving down computing costs, and the high price elasticity of technology demand creating new use cases</li>
+      <li data-letter="C">C. Network effects making streaming more valuable, and bundling reducing the cost of video content</li>
+      <li data-letter="D">D. Disruptive innovation in video content and the Long Tail of niche streaming services</li>
+    </ul>
+    <button class="check-btn" onclick="checkAnswer(this)">Check Answer</button>
+    <div class="q-feedback">
+      <strong>Correct answer: B.</strong> Moore's Law drove exponential improvement in processing power at decreasing cost, and the high price elasticity of tech demand means that cheaper computing unlocks entirely new applications (like mobile 4K streaming) that weren't feasible before. Option A misapplies supply chain concepts. Option C applies network effects incorrectly to streaming content. Option D misidentifies the core driving forces.
+    </div>
+  </div>
+
+  <div class="quiz-q" data-correct="D">
+    <div class="q-number">Question 2</div>
+    <div class="q-scenario">A student downloads a large video file and notices the download speed is listed as 100 Mbps. She expects the 1 GB file to download in about 10 seconds, but the download takes closer to 80 seconds.</div>
+    <div class="q-stem">Which concept best explains the discrepancy between her expectation and the actual download time?</div>
+    <ul class="q-options">
+      <li data-letter="A">A. Moore's Law has slowed down, reducing her device's processing speed</li>
+      <li data-letter="B">B. Her device lacks a multicore processor needed for fast downloads</li>
+      <li data-letter="C">C. The file was stored on a semiconductor that uses outdated transistor technology</li>
+      <li data-letter="D">D. Transfer speed is measured in bits (b), not Bytes (B) — 100 Mbps equals only 12.5 MB/s, so 1 GB takes about 80 seconds</li>
+    </ul>
+    <button class="check-btn" onclick="checkAnswer(this)">Check Answer</button>
+    <div class="q-feedback">
+      <strong>Correct answer: D.</strong> Storage is measured in Bytes (capital B), but transfer speeds are in bits (lowercase b). Dividing 100 Mbps by 8 gives 12.5 MB/s — so a 1 GB (1,000 MB) file takes about 80 seconds. Option A is unrelated to network transfer speeds. Option B confuses CPU architecture with download speeds. Option C misapplies semiconductor concepts.
+    </div>
+  </div>
+
+  <div class="quiz-q" data-correct="A">
+    <div class="q-number">Question 3</div>
+    <div class="q-scenario">An AI startup needs to train a massive machine learning model that requires performing millions of matrix multiplications simultaneously. The company is choosing between purchasing traditional CPUs or specialized processors designed specifically for parallel computation tasks.</div>
+    <div class="q-stem">Which hardware choice is most appropriate for this AI workload, and why?</div>
+    <ul class="q-options">
+      <li data-letter="A">A. GPUs, because they are designed for parallel processing — performing many calculations simultaneously — making them ideal for AI training</li>
+      <li data-letter="B">B. Supercomputers, because they are the only hardware capable of running machine learning algorithms</li>
+      <li data-letter="C">C. Multicore CPUs, because having more CPU cores eliminates the need for specialized AI processors</li>
+      <li data-letter="D">D. RFID chips, because they can process data wirelessly at high speeds for AI workloads</li>
+    </ul>
+    <button class="check-btn" onclick="checkAnswer(this)">Check Answer</button>
+    <div class="q-feedback">
+      <strong>Correct answer: A.</strong> GPUs (originally designed for graphics) excel at parallel processing — performing many calculations simultaneously — which is exactly what AI training requires. GPUs are a type of ASIC optimized for this purpose, and NVIDIA dominates this market. Option B is too extreme — supercomputers aren't the only option. Option C understates the specialized advantages of GPUs. Option D misapplies RFID technology, which is for identification and tracking.
+    </div>
+  </div>
+
+  <div class="quiz-q" data-correct="C">
+    <div class="q-number">Question 4</div>
+    <div class="q-scenario">The U.S. government is concerned that most advanced semiconductor chips are manufactured by a single company (TSMC) in Taiwan. A geopolitical disruption in the Taiwan Strait could cut off the supply of chips needed for everything from smartphones to military systems.</div>
+    <div class="q-stem">Which policy initiative was designed to address this vulnerability?</div>
+    <ul class="q-options">
+      <li data-letter="A">A. Moore's Law, which mandates that chip performance must double every 18 months</li>
+      <li data-letter="B">B. The Fair Factories Clearinghouse, which ensures ethical manufacturing practices in chip fabrication</li>
+      <li data-letter="C">C. The CHIPS and Science Act, which provides $52 billion in subsidies for domestic U.S. semiconductor production</li>
+      <li data-letter="D">D. The Gartner Hype Cycle, which helps the government predict when chip technology will mature</li>
+    </ul>
+    <button class="check-btn" onclick="checkAnswer(this)">Check Answer</button>
+    <div class="q-feedback">
+      <strong>Correct answer: C.</strong> The CHIPS and Science Act (2022) provides $52B in subsidies, $24B in tax credits, and $170B+ for research to build domestic semiconductor manufacturing capacity. Option A is wrong — Moore's Law is an observation, not legislation. Option B addresses factory labor conditions, not chip supply chains. Option D is a technology analysis framework, not a policy initiative.
+    </div>
+  </div>
+
+  <div class="quiz-q" data-correct="B">
+    <div class="q-number">Question 5</div>
+    <div class="q-scenario">A competitive online gamer complains that even though her internet plan advertises 500 Mbps, she still experiences frustrating delays during multiplayer matches. Her roommate, who streams Netflix in 4K, has no issues. The gamer's delays occur as brief freezes and input lag, not buffering or low resolution.</div>
+    <div class="q-stem">Which network concept best explains the gamer's problem?</div>
+    <ul class="q-options">
+      <li data-letter="A">A. Low bandwidth, because 500 Mbps is not enough for online gaming</li>
+      <li data-letter="B">B. High latency, because gaming requires fast response times (low delay), not just high data volume</li>
+      <li data-letter="C">C. Moore's Law slowdown, because her gaming hardware can't keep up with modern games</li>
+      <li data-letter="D">D. E-waste degradation, because older network equipment performs worse over time</li>
+    </ul>
+    <button class="check-btn" onclick="checkAnswer(this)">Check Answer</button>
+    <div class="q-feedback">
+      <strong>Correct answer: B.</strong> Bandwidth is about data volume (like highway lanes) — 500 Mbps is plenty for gaming. Latency is about response time (like the speed limit). Gaming requires low latency (fast responses), while streaming requires high bandwidth (lots of data). The gamer's input lag and brief freezes are classic symptoms of high latency. Option A is wrong — 500 Mbps is more than sufficient bandwidth. Option C misapplies Moore's Law. Option D fabricates a concept.
+    </div>
+  </div>
+</div>
+</section>
+
+<!-- ═══════════════════════════════════════════════ -->
+<!-- CHAPTER 7 -->
+<!-- ═══════════════════════════════════════════════ -->
+<section class="chapter" id="ch7">
+<div class="chapter-header">
+  <span class="ch-num">Chapter 7</span>
+  <h2>Software for Managers</h2>
+</div>
+
+<div class="vocab-section">
+  <h3>Key Vocabulary &amp; Concepts</h3>
+
+  <div class="vocab-item">
+    <div class="vocab-term">Four Questions to Classify Software</div>
+    <div class="vocab-def">(1) What layer of Konana's Ecosystem does it occupy? (2) Is the source code open or closed (proprietary)? (3) Is execution local or hosted (cloud)? (4) Are its standards open (anyone can build compatible software) or closed (permission required)?</div>
+    <div class="vocab-cite">Source: Course slides, Ch 7.</div>
+  </div>
+
+  <div class="vocab-item">
+    <div class="vocab-term">Operating System (OS)</div>
+    <div class="vocab-def">The interface between hardware and applications. Handles keystrokes, display, file systems, and resource management. Business models vary: Microsoft sells it separately, Apple bundles it with hardware, Linux distributes it for free.</div>
+    <div class="vocab-cite">Source: Course slides, Ch 7.</div>
+  </div>
+
+  <div class="vocab-item">
+    <div class="vocab-term">Database Management System (DBMS)</div>
+    <div class="vocab-def">Software that sits above the OS and handles creating, maintaining, and manipulating data. Multiple applications can share one database through a DBMS, ensuring consistent data access across the organization.</div>
+    <div class="vocab-cite">Source: Course slides, Ch 7.</div>
+    <div class="vocab-example">Examples: SQL Server, Oracle, MySQL.</div>
+  </div>
+
+  <div class="vocab-item">
+    <div class="vocab-term">Middleware</div>
+    <div class="vocab-def">The "plumbing" that transports data between different applications. Sits between the OS/DBMS layer and the application layer, enabling communication across systems.</div>
+    <div class="vocab-cite">Source: Course slides, Ch 7.</div>
+    <div class="vocab-example">Example: A web browser is middleware — it sits between the operating system and web applications.</div>
+  </div>
+
+  <div class="vocab-item">
+    <div class="vocab-term">Enterprise Applications (ERP, SCM, CRM, BI)</div>
+    <div class="vocab-def">Large-scale software systems that help organizations work together across functions. ERP (Enterprise Resource Planning) integrates all business processes into one system. SCM (Supply Chain Management) coordinates logistics. CRM (Customer Relationship Management) manages customer interactions. BI (Business Intelligence) analyzes data for decision-making.</div>
+    <div class="vocab-cite">Source: Course slides, Ch 7.</div>
+    <div class="vocab-example">Example: Nestlé's SAP ERP implementation consolidated 9 million records into one database and saved $30 million per year on vanilla purchasing alone.</div>
+  </div>
+
+  <div class="vocab-item">
+    <div class="vocab-term">Total Cost of Ownership (TCO)</div>
+    <div class="vocab-def">The complete cost of acquiring and operating a technology system over its lifetime. Goes far beyond the purchase price to include requirements analysis, implementation, training, ongoing support, and strategic development. The purchase price is roughly 20% of total costs; hidden costs account for approximately 80%.</div>
+    <div class="vocab-cite">Source: Course slides, Ch 7.</div>
+  </div>
+</div>
+
+<div class="quiz-section">
+  <h3>Chapter 7 Quiz</h3>
+
+  <div class="quiz-q" data-correct="C">
+    <div class="q-number">Question 1</div>
+    <div class="q-scenario">A startup CEO is budgeting for a new CRM system. A vendor quotes $50,000 for the software license. The CEO budgets exactly $50,000, believing this covers the total expense. Six months later, the company has spent over $250,000 including consultants, data migration, employee training, customization, and ongoing support contracts.</div>
+    <div class="q-stem">Which concept explains why the CEO's original budget was so far off?</div>
+    <ul class="q-options">
+      <li data-letter="A">A. The Bullwhip Effect caused costs to amplify through the vendor's supply chain</li>
+      <li data-letter="B">B. The vendor used a freemium model that hid the true costs behind a low initial price</li>
+      <li data-letter="C">C. Total Cost of Ownership — the purchase price represents only about 20% of the true cost, with hidden costs making up roughly 80%</li>
+      <li data-letter="D">D. Moore's Law reduced the cost of the hardware but not the software</li>
+    </ul>
+    <button class="check-btn" onclick="checkAnswer(this)">Check Answer</button>
+    <div class="q-feedback">
+      <strong>Correct answer: C.</strong> TCO includes all costs beyond the initial purchase: implementation, training, customization, support, and ongoing maintenance. The $50K license was roughly 20% of the $250K true cost. Option A misapplies a supply chain concept. Option B describes a pricing model, not a cost estimation error. Option D is irrelevant to software licensing costs.
+    </div>
+  </div>
+
+  <div class="quiz-q" data-correct="A">
+    <div class="q-number">Question 2</div>
+    <div class="q-scenario">Nestlé implemented SAP across its global operations. Before the implementation, different regional offices used different systems that couldn't share data — the company had multiple overlapping vendor contracts and inconsistent pricing across regions. After consolidating everything into one SAP system with a single database, Nestlé saved $30 million per year on vanilla purchasing alone.</div>
+    <div class="q-stem">What type of software is SAP in this scenario, and which layer of Konana's Ecosystem does it occupy?</div>
+    <ul class="q-options">
+      <li data-letter="A">A. SAP is an Enterprise Application (ERP), occupying the Enterprise Applications layer</li>
+      <li data-letter="B">B. SAP is an Operating System that replaced Nestlé's legacy hardware</li>
+      <li data-letter="C">C. SAP is Middleware that transports data between Nestlé's existing applications</li>
+      <li data-letter="D">D. SAP is a Database Management System that stores all of Nestlé's records</li>
+    </ul>
+    <button class="check-btn" onclick="checkAnswer(this)">Check Answer</button>
+    <div class="q-feedback">
+      <strong>Correct answer: A.</strong> SAP is an ERP (Enterprise Resource Planning) system — an enterprise application that integrates business processes across an organization. In Konana's Ecosystem, it sits at the Enterprise Applications layer. Option B misidentifies the layer — SAP is not an OS. Option C confuses SAP with middleware. Option D confuses SAP with a DBMS — while SAP uses a database, SAP itself is the application layer above it.
+    </div>
+  </div>
+
+  <div class="quiz-q" data-correct="D">
+    <div class="q-number">Question 3</div>
+    <div class="q-scenario">A student is trying to classify Google Chrome. Chrome runs on top of the operating system (Windows, macOS, or Linux) and allows users to access web-based applications like Google Docs, Canvas, and Netflix. It doesn't create or store data itself — it transports and displays information from other sources.</div>
+    <div class="q-stem">In Konana's Software Ecosystem, which layer does Google Chrome best fit?</div>
+    <ul class="q-options">
+      <li data-letter="A">A. Operating System, because Chrome manages how the computer displays information</li>
+      <li data-letter="B">B. Consumer Application, because students use Chrome for personal web browsing</li>
+      <li data-letter="C">C. Database Management System, because Chrome accesses and displays data from websites</li>
+      <li data-letter="D">D. Middleware, because Chrome sits between the OS and web applications, transporting data between them</li>
+    </ul>
+    <button class="check-btn" onclick="checkAnswer(this)">Check Answer</button>
+    <div class="q-feedback">
+      <strong>Correct answer: D.</strong> Web browsers are middleware — they sit between the operating system and web-based applications, serving as the "plumbing" that transports and renders data. Option A confuses the browser with the OS. Option B misidentifies the layer — while consumers use Chrome, its function is enabling other applications, not being an end application. Option C confuses data display with data management.
+    </div>
+  </div>
+
+  <div class="quiz-q" data-correct="B">
+    <div class="q-number">Question 4</div>
+    <div class="q-scenario">A marketing manager evaluates two software options for her team. Option 1 is a closed-source, locally-installed tool where the company owns the license and all data stays on company servers. Option 2 is an open-source, cloud-hosted tool where anyone can view and modify the source code, and data is stored on the vendor's servers.</div>
+    <div class="q-stem">Using the "four questions to classify software," which pair of characteristics correctly distinguishes the two options?</div>
+    <ul class="q-options">
+      <li data-letter="A">A. Option 1 uses open standards; Option 2 uses closed standards</li>
+      <li data-letter="B">B. Option 1 is closed source and locally executed; Option 2 is open source and hosted (cloud) executed</li>
+      <li data-letter="C">C. Option 1 is middleware; Option 2 is an enterprise application</li>
+      <li data-letter="D">D. Option 1 has lower TCO; Option 2 has higher TCO because open source is always more expensive</li>
+    </ul>
+    <button class="check-btn" onclick="checkAnswer(this)">Check Answer</button>
+    <div class="q-feedback">
+      <strong>Correct answer: B.</strong> Two of the four classification questions are about source code (open vs. closed) and execution method (local vs. hosted). Option 1 is closed/local; Option 2 is open/hosted. Option A reverses the standards — open source doesn't necessarily mean closed standards. Option C guesses at ecosystem layers without information. Option D makes a false claim — open source software is often free, with TCO depending on support needs.
+    </div>
+  </div>
+
+  <div class="quiz-q" data-correct="A">
+    <div class="q-number">Question 5</div>
+    <div class="q-scenario">A mid-size company uses Windows as its operating system, SQL Server as its database, a custom web portal (accessed via Chrome) for order management, and Salesforce CRM for customer relationships. Each layer of software depends on the layers below it to function.</div>
+    <div class="q-stem">If the company wanted to switch from Windows to Linux, which characteristic of Konana's Software Ecosystem makes this change particularly difficult?</div>
+    <ul class="q-options">
+      <li data-letter="A">A. Each layer depends on those below it, so changing the OS could break every layer above it — creating significant switching costs and lock-in</li>
+      <li data-letter="B">B. Linux is open source and therefore incompatible with commercial applications like SQL Server</li>
+      <li data-letter="C">C. The Gartner Hype Cycle suggests Linux is in the Trough of Disillusionment</li>
+      <li data-letter="D">D. Network effects prevent any company from switching operating systems</li>
+    </ul>
+    <button class="check-btn" onclick="checkAnswer(this)">Check Answer</button>
+    <div class="q-feedback">
+      <strong>Correct answer: A.</strong> In Konana's Software Ecosystem, each layer depends on those below it. Changing the OS (a foundational layer) can break compatibility with the DBMS, middleware, and applications above it, creating massive switching costs. Option B is factually incorrect — SQL Server now runs on Linux. Option C misapplies the Hype Cycle. Option D overstates the role of network effects in OS switching.
+    </div>
+  </div>
+</div>
+</section>
+
+<!-- ═══════════════════════════════════════════════ -->
+<!-- CHAPTER 8 -->
+<!-- ═══════════════════════════════════════════════ -->
+<section class="chapter" id="ch8">
+<div class="chapter-header">
+  <span class="ch-num">Chapter 8</span>
+  <h2>Open Source Software</h2>
+</div>
+
+<div class="vocab-section">
+  <h3>Key Vocabulary &amp; Concepts</h3>
+
+  <div class="vocab-item">
+    <div class="vocab-term">Open Source Software (OSS)</div>
+    <div class="vocab-def">Software whose source code is freely available for anyone to view, modify, and distribute. OSS vendors generate revenue not from selling code but from support, consulting, security compliance, hosting, and premium enterprise tools.</div>
+    <div class="vocab-cite">Source: Course slides, Ch 8; Open Source Initiative, <a href="https://opensource.org/osd" target="_blank">opensource.org</a>.</div>
+  </div>
+
+  <div class="vocab-item">
+    <div class="vocab-term">Closed Source (Proprietary) Software</div>
+    <div class="vocab-def">Software where the source code is treated as intellectual property and is not publicly available. Revenue comes from licensing fees, subscriptions, or download charges.</div>
+    <div class="vocab-cite">Source: Course slides, Ch 8.</div>
+  </div>
+
+  <div class="vocab-item">
+    <div class="vocab-term">Linux</div>
+    <div class="vocab-def">An open source operating system kernel created in 1991 by Linus Torvalds. Linux is the backbone of global internet infrastructure — even Microsoft Azure runs on it. The Linux Foundation (formed 2007) was created when rival tech companies (IBM, HP, Intel, Oracle) realized shared neutral infrastructure was cheaper than building proprietary operating systems.</div>
+    <div class="vocab-cite">Source: Torvalds, L. &amp; Diamond, D., <em>Just for Fun</em> (2001); Course slides, Ch 8.</div>
+  </div>
+
+  <div class="vocab-item">
+    <div class="vocab-term">Free Software Foundation (FSF)</div>
+    <div class="vocab-def">Founded by Richard Stallman in 1983 to promote the idea that software source code should be freely shared. Stallman's philosophy started the free software movement; Linus Torvalds later provided the practical kernel (Linux) that brought the vision to widespread use.</div>
+    <div class="vocab-cite">Source: Course slides, Ch 8.</div>
+  </div>
+
+  <div class="vocab-item">
+    <div class="vocab-term">Bus Factor</div>
+    <div class="vocab-def">The risk created when critical open source infrastructure is maintained by a small number of unpaid volunteers. If those volunteers stop contributing (figuratively, "get hit by a bus"), the entire project could collapse. The Linux Foundation was partly formed to address this problem.</div>
+    <div class="vocab-cite">Source: Course slides, Ch 8.</div>
+  </div>
+
+  <div class="vocab-item">
+    <div class="vocab-term">Tech Stacks</div>
+    <div class="vocab-def">Coordinated layers of software used together to build and run applications. LAMP (Linux, Apache, MySQL, PHP/Python) is the classic open source stack powering 40%+ of websites. MEAN (MongoDB, Express.js, Angular, Node.js) is the modern all-JavaScript stack for real-time applications.</div>
+    <div class="vocab-cite">Source: Course slides, Ch 8.</div>
+    <div class="vocab-example">LAMP examples: Facebook, YouTube, Wikipedia, Slack. MEAN examples: Netflix, Uber.</div>
+  </div>
+
+  <div class="vocab-item">
+    <div class="vocab-term">Compiled vs. Interpreted Languages</div>
+    <div class="vocab-def">Compiled languages (C++, C#) are converted entirely into machine code before execution, making them faster. Interpreted/scripting languages (Python, JavaScript, Java) are translated line-by-line at runtime, making them easier to write and test but generally slower.</div>
+    <div class="vocab-cite">Source: Course slides, Ch 8.</div>
+  </div>
+
+  <div class="vocab-item">
+    <div class="vocab-term">OSS Advantages</div>
+    <div class="vocab-def">Free to use, more reliable ("many eyes" find bugs), more secure (code is publicly auditable), scalable, and faster time to market. Consumer OSS apps are less popular because infrastructure-level projects get more community support, consumers value source code access less, and TCO can be higher without a support contract.</div>
+    <div class="vocab-cite">Source: Course slides, Ch 8.</div>
+  </div>
+</div>
+
+<div class="quiz-section">
+  <h3>Chapter 8 Quiz</h3>
+
+  <div class="quiz-q" data-correct="C">
+    <div class="q-number">Question 1</div>
+    <div class="q-scenario">A startup founder is choosing a tech stack for her new web application. She wants the entire stack to use a single programming language (JavaScript) from the database to the front-end interface. She also needs the app to handle real-time data updates for a live chat feature.</div>
+    <div class="q-stem">Which tech stack best meets these requirements?</div>
+    <ul class="q-options">
+      <li data-letter="A">A. LAMP, because Linux provides the most reliable foundation for real-time applications</li>
+      <li data-letter="B">B. A proprietary Microsoft stack, because closed source software is faster than open source</li>
+      <li data-letter="C">C. MEAN (MongoDB, Express.js, Angular, Node.js), because it uses JavaScript throughout and is designed for real-time applications</li>
+      <li data-letter="D">D. SAP ERP, because enterprise applications can handle any type of web development</li>
+    </ul>
+    <button class="check-btn" onclick="checkAnswer(this)">Check Answer</button>
+    <div class="q-feedback">
+      <strong>Correct answer: C.</strong> MEAN is an all-JavaScript stack (MongoDB for database, Express.js for server framework, Angular for front-end, Node.js for server-side runtime) designed for modern, real-time web applications. Option A uses multiple languages (PHP/Python), not JavaScript throughout. Option B makes a false claim about speed. Option D is an enterprise resource planning system, not a web development stack.
+    </div>
+  </div>
+
+  <div class="quiz-q" data-correct="A">
+    <div class="q-number">Question 2</div>
+    <div class="q-scenario">A cybersecurity expert argues that open source software is actually more secure than closed source software, despite the fact that anyone can view the code — including potential attackers. A skeptical manager counters that making code public invites hackers.</div>
+    <div class="q-stem">Which argument best supports the cybersecurity expert's claim?</div>
+    <ul class="q-options">
+      <li data-letter="A">A. With open source, many independent developers can review and audit the code, so vulnerabilities are found and fixed faster than in closed source software</li>
+      <li data-letter="B">B. Open source software is always free, so companies can spend more on security consultants</li>
+      <li data-letter="C">C. Open source code is encrypted so that only authorized developers can actually read it</li>
+      <li data-letter="D">D. The Linux Foundation prevents any unauthorized modifications to open source code</li>
+    </ul>
+    <button class="check-btn" onclick="checkAnswer(this)">Check Answer</button>
+    <div class="q-feedback">
+      <strong>Correct answer: A.</strong> The "many eyes" principle is a core OSS advantage — with thousands of developers able to review code, bugs and vulnerabilities are identified and patched more quickly. Option B conflates free software with security spending. Option C is factually wrong — open source code is publicly readable by definition. Option D misrepresents how open source governance works.
+    </div>
+  </div>
+
+  <div class="quiz-q" data-correct="D">
+    <div class="q-number">Question 3</div>
+    <div class="q-scenario">In the early 2000s, IBM, HP, Intel, and Oracle were fierce competitors. Yet in 2007, they all contributed funding and engineering resources to form the Linux Foundation, a neutral organization to support and maintain the Linux operating system.</div>
+    <div class="q-stem">What was the primary business motivation for these competitors to collaborate?</div>
+    <ul class="q-options">
+      <li data-letter="A">A. They wanted to create a proprietary OS they could all sell at a premium price</li>
+      <li data-letter="B">B. Linux was failing in the market and they wanted to save it from the Trough of Disillusionment</li>
+      <li data-letter="C">C. The companies wanted to prevent the Bullwhip Effect in their hardware supply chains</li>
+      <li data-letter="D">D. Shared neutral infrastructure was cheaper than each building proprietary operating systems, and they needed to address the "bus factor" risk of volunteer-maintained code</li>
+    </ul>
+    <button class="check-btn" onclick="checkAnswer(this)">Check Answer</button>
+    <div class="q-feedback">
+      <strong>Correct answer: D.</strong> These companies realized it was cheaper to share the cost of maintaining Linux (which they all relied on) than for each to build a proprietary OS. They also needed to solve the "bus factor" problem — unpaid volunteers maintaining critical infrastructure. Option A contradicts the open source model. Option B misapplies the Hype Cycle. Option C is a supply chain concept unrelated to OS development.
+    </div>
+  </div>
+
+  <div class="quiz-q" data-correct="B">
+    <div class="q-number">Question 4</div>
+    <div class="q-scenario">A company uses Red Hat Enterprise Linux (RHEL) for its servers. While the Linux source code itself is free, the company pays Red Hat $15,000 per year for a support subscription that includes security patches, technical support, and compliance certifications.</div>
+    <div class="q-stem">Which OSS business model does Red Hat's approach represent?</div>
+    <ul class="q-options">
+      <li data-letter="A">A. Freemium, because Red Hat offers a free version with limited features</li>
+      <li data-letter="B">B. Revenue from support, consulting, and security compliance rather than from the code itself</li>
+      <li data-letter="C">C. Closed source licensing, because paying for a subscription makes the code proprietary</li>
+      <li data-letter="D">D. Bundling, because Red Hat packages Linux with other paid software products</li>
+    </ul>
+    <button class="check-btn" onclick="checkAnswer(this)">Check Answer</button>
+    <div class="q-feedback">
+      <strong>Correct answer: B.</strong> OSS vendors like Red Hat make money not from selling code but from support, consulting, security compliance, hosting, and enterprise tools. The code remains open source. Option A mislabels this as freemium — the code itself is fully available, not limited. Option C is wrong — paying for support doesn't make code proprietary. Option D misapplies bundling.
+    </div>
+  </div>
+
+  <div class="quiz-q" data-correct="C">
+    <div class="q-number">Question 5</div>
+    <div class="q-scenario">A manager is evaluating programming languages for a quick data analysis project. She needs to write a script that processes CSV files, generates summary statistics, and produces a chart. The project needs to be done quickly, and execution speed is not a priority.</div>
+    <div class="q-stem">Which type of programming language is most appropriate for this task, and why?</div>
+    <ul class="q-options">
+      <li data-letter="A">A. A compiled language like C++, because compiled code is always better for data analysis</li>
+      <li data-letter="B">B. Assembly language, because it gives the most direct control over the hardware</li>
+      <li data-letter="C">C. An interpreted language like Python, because it's easier and faster to write, test, and iterate — and execution speed is not the priority</li>
+      <li data-letter="D">D. A database language like SQL, because all data analysis must be done inside a DBMS</li>
+    </ul>
+    <button class="check-btn" onclick="checkAnswer(this)">Check Answer</button>
+    <div class="q-feedback">
+      <strong>Correct answer: C.</strong> Interpreted languages like Python are easier to write and test quickly (no compilation step), making them ideal for rapid development when execution speed isn't critical. Option A overvalues execution speed when the scenario says it's not a priority. Option B is impractical for data analysis. Option D incorrectly states that all data analysis requires a DBMS.
+    </div>
+  </div>
+</div>
+</section>
+
+<!-- ═══════════════════════════════════════════════ -->
+<!-- CHAPTER 9 -->
+<!-- ═══════════════════════════════════════════════ -->
+<section class="chapter" id="ch9">
+<div class="chapter-header">
+  <span class="ch-num">Chapter 9</span>
+  <h2>Software as a Service (SaaS)</h2>
+</div>
+
+<div class="vocab-section">
+  <h3>Key Vocabulary &amp; Concepts</h3>
+
+  <div class="vocab-item">
+    <div class="vocab-term">Cloud Computing</div>
+    <div class="vocab-def">The outsourcing of technology stack management to a third-party provider. Instead of owning and maintaining hardware, software, and databases on-site, firms rent these resources from cloud providers who manage them remotely.</div>
+    <div class="vocab-cite">Source: Course slides, Ch 9; NIST SP 800-145.</div>
+  </div>
+
+  <div class="vocab-item">
+    <div class="vocab-term">IaaS (Infrastructure as a Service)</div>
+    <div class="vocab-def">A cloud model where the provider manages the hardware (servers, storage, networking) and the customer manages everything above it (OS, middleware, applications, data). The customer rents raw computing infrastructure.</div>
+    <div class="vocab-cite">Source: Course slides, Ch 9.</div>
+    <div class="vocab-example">Examples: Netflix uses AWS; Walmart uses Azure.</div>
+  </div>
+
+  <div class="vocab-item">
+    <div class="vocab-term">PaaS (Platform as a Service)</div>
+    <div class="vocab-def">A cloud model where the provider manages hardware, OS, middleware, and development tools. The customer only builds and manages their own applications on top of the platform.</div>
+    <div class="vocab-cite">Source: Course slides, Ch 9.</div>
+    <div class="vocab-example">Example: Salesforce lets customers build custom applications on its platform.</div>
+  </div>
+
+  <div class="vocab-item">
+    <div class="vocab-term">SaaS (Software as a Service)</div>
+    <div class="vocab-def">A cloud model where the provider manages the entire stack — hardware, OS, DBMS, middleware, and the application itself. The customer simply uses the software through a web browser or app. Business models include subscriptions, freemium, and ad-supported.</div>
+    <div class="vocab-cite">Source: Course slides, Ch 9.</div>
+    <div class="vocab-example">Examples: Canvas, Office 365, Google Sheets, Salesforce CRM.</div>
+  </div>
+
+  <div class="vocab-item">
+    <div class="vocab-term">SaaS Benefits</div>
+    <div class="vocab-def">Faster deployment, lower upfront costs (no hardware/software/DBMS purchase), better hardware quality from specialized providers, remote access from anywhere, elastic scalability, and more predictable costs. Developers benefit from maintaining a single platform, easy deployment of updates, and no piracy problem (code never leaves the server).</div>
+    <div class="vocab-cite">Source: Course slides, Ch 9.</div>
+  </div>
+
+  <div class="vocab-item">
+    <div class="vocab-term">SaaS Risks</div>
+    <div class="vocab-def">Vendor dependency (lock-in), forced migration/switching costs if the vendor changes terms, latency issues, missing features compared to desktop versions, data stored off-site raising security/legal concerns, and WiFi dependency. However, major cloud providers (AWS, Azure, Google Cloud) generally have better security than most individual enterprises.</div>
+    <div class="vocab-cite">Source: Course slides, Ch 9.</div>
+  </div>
+
+  <div class="vocab-item">
+    <div class="vocab-term">Why Firms Still Use On-Premise Software</div>
+    <div class="vocab-def">Unique business processes that can't be standardized for cloud delivery, perceived security threats (even though major cloud providers are often more secure), and regulatory constraints that require data to remain on-site.</div>
+    <div class="vocab-cite">Source: Course slides, Ch 9.</div>
+  </div>
+
+  <div class="vocab-item">
+    <div class="vocab-term">TCO: SaaS vs. Traditional Software</div>
+    <div class="vocab-def">Over time, SaaS typically has much lower and more predictable costs than traditional licensed software. Traditional software costs spike at implementation, integration, and upgrade cycles, whereas SaaS costs remain relatively flat.</div>
+    <div class="vocab-cite">Source: Course slides, Ch 9.</div>
+  </div>
+</div>
+
+<div class="quiz-section">
+  <h3>Chapter 9 Quiz</h3>
+
+  <div class="quiz-q" data-correct="B">
+    <div class="q-number">Question 1</div>
+    <div class="q-scenario">A small nonprofit organization needs email, document editing, and video conferencing for its 20 employees. It has no IT staff and a very limited budget. The executive director wants to avoid purchasing servers, hiring technicians, or managing software updates.</div>
+    <div class="q-stem">Which cloud computing model best fits this nonprofit's needs?</div>
+    <ul class="q-options">
+      <li data-letter="A">A. IaaS, because renting raw servers gives the nonprofit maximum control over its infrastructure</li>
+      <li data-letter="B">B. SaaS, because the entire technology stack is managed by the provider — the nonprofit just uses the software through a browser</li>
+      <li data-letter="C">C. PaaS, because the nonprofit can build its own custom email and video conferencing applications</li>
+      <li data-letter="D">D. On-premise, because owning the hardware is always cheaper than cloud subscriptions for small organizations</li>
+    </ul>
+    <button class="check-btn" onclick="checkAnswer(this)">Check Answer</button>
+    <div class="q-feedback">
+      <strong>Correct answer: B.</strong> SaaS means the provider manages everything — hardware, OS, software, updates. The nonprofit just opens a browser and uses email, docs, and video (like Google Workspace or Microsoft 365). Option A requires technical staff to manage servers. Option C requires developers to build applications. Option D ignores the nonprofit's lack of IT staff and budget constraints.
+    </div>
+  </div>
+
+  <div class="quiz-q" data-correct="D">
+    <div class="q-number">Question 2</div>
+    <div class="q-scenario">Netflix runs its streaming service on Amazon Web Services (AWS). Netflix's engineers manage the operating system configuration, deploy their own proprietary streaming software, and control their content delivery network. AWS provides and maintains the physical servers, storage, and networking hardware.</div>
+    <div class="q-stem">Which cloud computing model does Netflix's use of AWS represent?</div>
+    <ul class="q-options">
+      <li data-letter="A">A. SaaS, because Netflix streams video content to consumers over the internet</li>
+      <li data-letter="B">B. PaaS, because AWS provides Netflix with a development platform for building apps</li>
+      <li data-letter="C">C. On-premise, because Netflix manages its own software and OS configuration</li>
+      <li data-letter="D">D. IaaS, because AWS provides the hardware infrastructure while Netflix manages everything above it</li>
+    </ul>
+    <button class="check-btn" onclick="checkAnswer(this)">Check Answer</button>
+    <div class="q-feedback">
+      <strong>Correct answer: D.</strong> IaaS means the cloud provider manages hardware and the customer manages the OS, middleware, and applications. Netflix manages its own software stack on top of AWS infrastructure. Option A confuses Netflix's product (SaaS to consumers) with how Netflix uses AWS (IaaS). Option B would mean AWS manages the OS and middleware too. Option C is wrong because the hardware is AWS's, not Netflix's.
+    </div>
+  </div>
+
+  <div class="quiz-q" data-correct="A">
+    <div class="q-number">Question 3</div>
+    <div class="q-scenario">A financial services firm is considering moving its customer data to a SaaS CRM platform. The Chief Security Officer objects, arguing that storing sensitive financial data on someone else's servers is inherently less secure than keeping it on the company's own servers behind its own firewall.</div>
+    <div class="q-stem">Based on the course material, which response best addresses the CSO's concern?</div>
+    <ul class="q-options">
+      <li data-letter="A">A. Major cloud providers like AWS, Azure, and Google Cloud generally have better security than most individual enterprises, though regulatory constraints may still require on-premise storage</li>
+      <li data-letter="B">B. SaaS is always more secure than on-premise because cloud providers never get hacked</li>
+      <li data-letter="C">C. The CSO is correct — data stored off-site is always less secure than data stored on-premise</li>
+      <li data-letter="D">D. Security concerns are irrelevant because SaaS eliminates all need for data governance</li>
+    </ul>
+    <button class="check-btn" onclick="checkAnswer(this)">Check Answer</button>
+    <div class="q-feedback">
+      <strong>Correct answer: A.</strong> The course notes that major cloud providers typically have better security than most enterprises, but also acknowledges that regulatory constraints may still require on-premise data. Option B makes an absolute claim that's false. Option C makes an equally false absolute claim in the other direction. Option D is dangerously wrong — SaaS doesn't eliminate data governance needs.
+    </div>
+  </div>
+
+  <div class="quiz-q" data-correct="C">
+    <div class="q-number">Question 4</div>
+    <div class="q-scenario">A mid-size company switched to a SaaS project management tool two years ago. Now the vendor is increasing subscription prices by 40% and changing the data export format, making it extremely difficult to migrate to a competitor. The company feels trapped.</div>
+    <div class="q-stem">Which SaaS risk does this scenario best illustrate?</div>
+    <ul class="q-options">
+      <li data-letter="A">A. Latency issues that make the software too slow to use effectively</li>
+      <li data-letter="B">B. Missing desktop features that prevent employees from completing their work</li>
+      <li data-letter="C">C. Vendor dependency and forced migration/switching costs that create lock-in</li>
+      <li data-letter="D">D. WiFi dependency that makes the software unreliable during network outages</li>
+    </ul>
+    <button class="check-btn" onclick="checkAnswer(this)">Check Answer</button>
+    <div class="q-feedback">
+      <strong>Correct answer: C.</strong> The scenario describes classic vendor dependency — the company is locked in because switching would be costly and difficult due to changed data export formats and price increases. Options A, B, and D describe other legitimate SaaS risks but don't match this specific scenario.
+    </div>
+  </div>
+
+  <div class="quiz-q" data-correct="B">
+    <div class="q-number">Question 5</div>
+    <div class="q-scenario">A SaaS company maintains one version of its project management software that all 50,000 customers use. When a bug is discovered, the company's engineers fix it once and the fix is immediately available to every customer. No customer needs to download or install anything.</div>
+    <div class="q-stem">Which SaaS advantage for developers does this scenario best demonstrate?</div>
+    <ul class="q-options">
+      <li data-letter="A">A. Lower upfront costs, because the SaaS company doesn't need to purchase hardware</li>
+      <li data-letter="B">B. Single platform maintenance — developers maintain one codebase and deploy updates to all customers instantly</li>
+      <li data-letter="C">C. No piracy, because customers can freely copy the software without the developer's permission</li>
+      <li data-letter="D">D. Elastic scalability, because the software automatically adjusts to handle more customers</li>
+    </ul>
+    <button class="check-btn" onclick="checkAnswer(this)">Check Answer</button>
+    <div class="q-feedback">
+      <strong>Correct answer: B.</strong> A key SaaS developer advantage is maintaining a single platform — one codebase serving all customers, with instant deployment of fixes and updates. Option A describes a customer benefit, not a developer advantage. Option C reverses the piracy point — SaaS prevents piracy because code never leaves the server. Option D describes infrastructure scaling, not the single-platform maintenance benefit.
+    </div>
+  </div>
+</div>
+</section>
+
+<!-- ═══════════════════════════════════════════════ -->
+<!-- CHAPTER 10 -->
+<!-- ═══════════════════════════════════════════════ -->
+<section class="chapter" id="ch10">
+<div class="chapter-header">
+  <span class="ch-num">Chapter 10</span>
+  <h2>Software Project Management</h2>
+</div>
+
+<div class="vocab-section">
+  <h3>Key Vocabulary &amp; Concepts</h3>
+
+  <div class="vocab-item">
+    <div class="vocab-term">Systems Development</div>
+    <div class="vocab-def">The process of creating and maintaining information systems. Involves all 5 IS components (Hardware, Software, Data, Processes, People) — not just programming. Requires business knowledge and management skill alongside technical expertise. There are no pure "IT projects" — they're business projects with an IT component.</div>
+    <div class="vocab-cite">Source: Course slides, Ch 10.</div>
+  </div>
+
+  <div class="vocab-item">
+    <div class="vocab-term">Brooks's Law</div>
+    <div class="vocab-def">Adding more people to a late software project makes it later. New team members need time to learn the project and increase communication overhead, slowing the team down. Named after Fred Brooks, author of <em>The Mythical Man-Month</em>.</div>
+    <div class="vocab-cite">Source: Brooks, F., <em>The Mythical Man-Month</em> (1975); Course slides, Ch 10.</div>
+  </div>
+
+  <div class="vocab-item">
+    <div class="vocab-term">Project Management Triple Constraint</div>
+    <div class="vocab-def">Three competing constraints on every project: Scope (what gets built), Resources (money, people, equipment), and Schedule (time). You cannot optimize all three simultaneously — improving one typically requires sacrificing another.</div>
+    <div class="vocab-cite">Source: Course slides, Ch 10; PMI, <em>PMBOK Guide</em>.</div>
+  </div>
+
+  <div class="vocab-item">
+    <div class="vocab-term">Waterfall Methodology</div>
+    <div class="vocab-def">A linear, sequential development approach where all requirements are gathered upfront, and each phase (requirements → design → development → testing → deployment) must be completed before the next begins. Works for civil engineering but causes many software project failures because requirements often change mid-project.</div>
+    <div class="vocab-cite">Source: Course slides, Ch 10.</div>
+  </div>
+
+  <div class="vocab-item">
+    <div class="vocab-term">Agile Methodology</div>
+    <div class="vocab-def">An iterative, continuous development approach with frequent rollouts. The dominant modern methodology. Development cycles through: Plan → Design → Develop → Test → Deploy → Review, with each iteration producing a working increment. Techniques include test-driven design, pair programming, extreme programming, and refactoring.</div>
+    <div class="vocab-cite">Source: Beck, K. et al., <em>Manifesto for Agile Software Development</em> (2001); Course slides, Ch 10.</div>
+  </div>
+
+  <div class="vocab-item">
+    <div class="vocab-term">Prototypes &amp; Wireframes</div>
+    <div class="vocab-def">Mock-ups used to help users evaluate requirements, test interfaces, and communicate with developers. A risk is that prototypes can make things look more complete than they actually are, creating unrealistic expectations.</div>
+    <div class="vocab-cite">Source: Course slides, Ch 10.</div>
+  </div>
+
+  <div class="vocab-item">
+    <div class="vocab-term">Low Code / No Code (LCNC)</div>
+    <div class="vocab-def">Visual development tools that allow "citizen developers" (non-programmers) to build applications with minimal coding. The market was approximately $27 billion in 2023. Concerns include inconsistent data, duplicate costs, regulatory violations (HIPAA, FERPA, GDPR), security issues, and platform dependency.</div>
+    <div class="vocab-cite">Source: Course slides, Ch 10.</div>
+    <div class="vocab-example">Examples: Google AppSheet, Microsoft Power Apps, Oracle APEX, Salesforce Lightning.</div>
+  </div>
+
+  <div class="vocab-item">
+    <div class="vocab-term">IDE (Integrated Development Environment)</div>
+    <div class="vocab-def">A software tool that bundles a code editor, debugger, and compiler into one application, providing a complete environment for writing, testing, and compiling code.</div>
+    <div class="vocab-cite">Source: Course slides, Ch 10.</div>
+  </div>
+
+  <div class="vocab-item">
+    <div class="vocab-term">Why Tech Projects Fail</div>
+    <div class="vocab-def">Common causes: poor goals, weak leadership, lack of executive commitment, bad resource forecasting, scope creep (uncontrolled expansion of project requirements), poor communication, immature technology choices, inadequate testing, organizational politics, and time pressure.</div>
+    <div class="vocab-cite">Source: Course slides, Ch 10.</div>
+  </div>
+
+  <div class="vocab-item">
+    <div class="vocab-term">Scope Creep</div>
+    <div class="vocab-def">The uncontrolled expansion of a project's requirements beyond the original plan, often caused by stakeholders adding features without adjusting the schedule or budget. Business users must take responsibility for managing scope creep.</div>
+    <div class="vocab-cite">Source: Course slides, Ch 10.</div>
+  </div>
+
+  <div class="vocab-item">
+    <div class="vocab-term">HealthCare.gov Case Study</div>
+    <div class="vocab-def">Launched October 2013 with critical bugs — couldn't handle demand, had no performance dashboard, and terrible UX. Rescued by bringing in clear leadership and experienced technologists who used Agile practices (stand-up meetings, clear priorities). Fixed within approximately 2 months; over 8 million users signed up. A case study in how Agile rescued a Waterfall failure.</div>
+    <div class="vocab-cite">Source: Course slides, Ch 10.</div>
+  </div>
+
+  <div class="vocab-item">
+    <div class="vocab-term">User Responsibility for Requirements</div>
+    <div class="vocab-def">As a future business manager, taking responsibility for system requirements is your most important job. You must ensure complete and accurate requirements, manage scope creep, define test conditions, and actively participate throughout development. "Give IS pros good directions."</div>
+    <div class="vocab-cite">Source: Course slides, Ch 10.</div>
+  </div>
+</div>
+
+<div class="quiz-section">
+  <h3>Chapter 10 Quiz</h3>
+
+  <div class="quiz-q" data-correct="D">
+    <div class="q-number">Question 1</div>
+    <div class="q-scenario">A software team is three weeks behind schedule on a major release. The project manager's boss suggests hiring five additional developers immediately to get back on track. The lead developer warns that bringing new people in at this stage will actually make things worse.</div>
+    <div class="q-stem">Which principle supports the lead developer's warning?</div>
+    <ul class="q-options">
+      <li data-letter="A">A. The Triple Constraint — adding resources means the project budget will increase</li>
+      <li data-letter="B">B. Scope creep — new developers will want to add their own features to the project</li>
+      <li data-letter="C">C. Waterfall methodology — new developers can't join a project that has already passed the requirements phase</li>
+      <li data-letter="D">D. Brooks's Law — adding more people to a late project makes it later because of onboarding time and increased communication overhead</li>
+    </ul>
+    <button class="check-btn" onclick="checkAnswer(this)">Check Answer</button>
+    <div class="q-feedback">
+      <strong>Correct answer: D.</strong> Brooks's Law states that adding people to a late software project makes it even later. New developers need time to learn the codebase, and more people create exponentially more communication channels. Option A identifies a real tradeoff but doesn't explain why the schedule gets worse. Option B misattributes feature additions to new developers. Option C imposes a false rule about joining projects.
+    </div>
+  </div>
+
+  <div class="quiz-q" data-correct="A">
+    <div class="q-number">Question 2</div>
+    <div class="q-scenario">A university is building a new student registration system. The development team spent 6 months gathering every possible requirement before writing any code. Then they built the entire system at once and launched it at the start of fall registration. On launch day, students discovered that the class search feature was confusing, the waitlist didn't work properly, and the system crashed under heavy load.</div>
+    <div class="q-stem">Which development methodology was likely used, and how could a different approach have prevented these issues?</div>
+    <ul class="q-options">
+      <li data-letter="A">A. Waterfall was used — an Agile approach with iterative development and frequent testing would have caught issues earlier in smaller increments</li>
+      <li data-letter="B">B. Agile was used — a Waterfall approach with complete upfront planning would have prevented all bugs</li>
+      <li data-letter="C">C. Low Code/No Code was used — hiring professional developers would have produced better code</li>
+      <li data-letter="D">D. Prototyping was used — skipping the prototype phase would have saved time and avoided confusion</li>
+    </ul>
+    <button class="check-btn" onclick="checkAnswer(this)">Check Answer</button>
+    <div class="q-feedback">
+      <strong>Correct answer: A.</strong> The scenario describes classic Waterfall problems: all requirements gathered upfront, everything built at once, and problems discovered only at launch. Agile's iterative cycles (Plan → Design → Develop → Test → Deploy → Review) would have revealed these issues incrementally. Option B reverses the methodologies and makes a false claim. Option C guesses at the technology without evidence. Option D misapplies prototyping concepts.
+    </div>
+  </div>
+
+  <div class="quiz-q" data-correct="C">
+    <div class="q-number">Question 3</div>
+    <div class="q-scenario">A marketing VP keeps requesting new features for a company app — first a loyalty program, then a referral system, then a social media integration. Each request seems reasonable, but the project is now 4 months behind schedule and 60% over budget, with no adjustments made to the timeline or budget for any of the additions.</div>
+    <div class="q-stem">Which project management problem does this scenario best illustrate?</div>
+    <ul class="q-options">
+      <li data-letter="A">A. Brooks's Law, because the VP is effectively adding more people to the project</li>
+      <li data-letter="B">B. The Triple Constraint, because the project is running out of money</li>
+      <li data-letter="C">C. Scope creep, because requirements are expanding without corresponding adjustments to schedule or resources</li>
+      <li data-letter="D">D. Waterfall failure, because the project should have gathered all requirements before starting</li>
+    </ul>
+    <button class="check-btn" onclick="checkAnswer(this)">Check Answer</button>
+    <div class="q-feedback">
+      <strong>Correct answer: C.</strong> Scope creep is the uncontrolled expansion of requirements without adjusting the schedule or budget. Each new feature request expanded the scope without updating the plan. Option A misapplies Brooks's Law — no new team members were added. Option B identifies a symptom (budget overrun) but not the root cause. Option D misidentifies the methodology problem — the issue is scope management, not planning approach.
+    </div>
+  </div>
+
+  <div class="quiz-q" data-correct="B">
+    <div class="q-number">Question 4</div>
+    <div class="q-scenario">A department head at a large corporation says: "I don't need to be involved in the new inventory system project. That's an IT thing — let the tech people handle it. I'll just tell them what I want at the beginning and check the final product when it's done."</div>
+    <div class="q-stem">Based on the course material, why is this approach problematic?</div>
+    <ul class="q-options">
+      <li data-letter="A">A. The department head should learn to code so they can build the system themselves</li>
+      <li data-letter="B">B. There are no pure "IT projects" — business users must actively participate throughout development, take responsibility for requirements, and manage scope creep</li>
+      <li data-letter="C">C. The department head should use a Low Code/No Code platform to build the system without IT</li>
+      <li data-letter="D">D. IT projects only fail when the technology is too immature, which is unrelated to user involvement</li>
+    </ul>
+    <button class="check-btn" onclick="checkAnswer(this)">Check Answer</button>
+    <div class="q-feedback">
+      <strong>Correct answer: B.</strong> The course emphasizes that all IT projects are really business projects with an IT component. Business users must take responsibility for requirements, participate throughout development, and manage scope creep. Option A goes too far — coding isn't required. Option C might sometimes work but doesn't address the core issue of user participation. Option D ignores the many human causes of project failure.
+    </div>
+  </div>
+
+  <div class="quiz-q" data-correct="A">
+    <div class="q-number">Question 5</div>
+    <div class="q-scenario">When HealthCare.gov launched in October 2013, it was plagued with bugs — the site couldn't handle user volume, had no performance monitoring dashboard, and offered a terrible user experience. The government brought in a rescue team that implemented daily stand-up meetings, set clear priorities, and worked in short iterative cycles to fix the most critical issues first. Within about two months, the site was functional and ultimately enrolled over 8 million users.</div>
+    <div class="q-stem">Which development methodology did the rescue team apply to fix HealthCare.gov?</div>
+    <ul class="q-options">
+      <li data-letter="A">A. Agile, using iterative development with stand-up meetings and prioritized short cycles to deliver working fixes incrementally</li>
+      <li data-letter="B">B. Waterfall, by going back to gather complete requirements before rebuilding the entire site</li>
+      <li data-letter="C">C. Low Code/No Code, by replacing the development team with citizen developers using visual tools</li>
+      <li data-letter="D">D. Prototyping, by showing users mock-ups of the fixed website before implementing any changes</li>
+    </ul>
+    <button class="check-btn" onclick="checkAnswer(this)">Check Answer</button>
+    <div class="q-feedback">
+      <strong>Correct answer: A.</strong> The rescue team used Agile practices — stand-up meetings, clear priorities, and iterative short cycles — to fix the most critical issues first and deliver working improvements incrementally. Option B describes the approach that likely caused the initial failure. Option C is factually incorrect. Option D describes a useful technique but not the overall methodology applied.
+    </div>
+  </div>
+</div>
+</section>
+
+</main>
+
+<footer style="background:var(--charcoal);color:white;text-align:center;padding:2rem;font-size:0.85rem;opacity:0.8;">
+  MIS 301 Study Guide — UT Austin McCombs School of Business — Chapters 1–10<br>
+  Created as an extra credit study resource. Vocabulary sourced from course slides, textbook, and cited references.
+</footer>
+
+<script>
+function checkAnswer(btn) {
+  const quizQ = btn.closest('.quiz-q');
+  const correct = quizQ.dataset.correct;
+  const options = quizQ.querySelectorAll('.q-options li');
+  const feedback = quizQ.querySelector('.q-feedback');
+  
+  let selected = null;
+  options.forEach(opt => {
+    if (opt.classList.contains('selected')) selected = opt;
+  });
+  
+  if (!selected) {
+    // If nothing selected, highlight first as hint
+    alert('Please select an answer first!');
+    return;
+  }
+  
+  const selectedLetter = selected.dataset.letter;
+  
+  options.forEach(opt => {
+    opt.style.pointerEvents = 'none';
+    if (opt.dataset.letter === correct) {
+      opt.classList.add('correct');
+    } else if (opt.classList.contains('selected')) {
+      opt.classList.add('incorrect');
+    }
+  });
+  
+  feedback.classList.add('show');
+  if (selectedLetter === correct) {
+    feedback.classList.add('correct-fb');
+  } else {
+    feedback.classList.add('incorrect-fb');
+  }
+  
+  btn.disabled = true;
+}
+
+// Click to select
+document.querySelectorAll('.q-options li').forEach(li => {
+  li.addEventListener('click', function() {
+    const siblings = this.parentElement.querySelectorAll('li');
+    siblings.forEach(s => s.classList.remove('selected'));
+    this.classList.add('selected');
+  });
+});
+</script>
+
+</body>
+</html>
